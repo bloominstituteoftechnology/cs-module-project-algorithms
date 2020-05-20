@@ -3,9 +3,18 @@ Input: a List of integers where every int except one shows up twice
 Returns: an integer
 '''
 def single_number(arr):
-    # Your code here
+    buckets = {}
+    for x in arr: 
+        if buckets.get(x) is None:
+            buckets[x] = 1
+        else:
+            buckets[x]+= 1
 
-    pass
+    for i in buckets:
+        if buckets[i] == 1:
+            return i 
+        
+        
 
 
 if __name__ == '__main__':
