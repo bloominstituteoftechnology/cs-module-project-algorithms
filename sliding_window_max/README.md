@@ -21,7 +21,7 @@ Window position                Max
  Can you implement a solution that calculates all of the maximum sliding window values in O(n) time?
 
  ## Testing 
-Run the test file by executing  `python test_sliding_window_max.py`. 
+Run the test file by executing   `python test_sliding_window_max.py`. 
 
 There is also a larger test file that you can test your code against by running `python test_sliding_window_max_large_input.py`.
 
