@@ -4,6 +4,10 @@ Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
     # Your code here
+    if len(arr) < 1: # make sure the array isn't empty
+        return arr
+    else:
+        
 
     pass
 

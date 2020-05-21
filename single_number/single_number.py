@@ -4,6 +4,13 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
+    # the idea for the first-pass soltuion
+    # we'll keep an array, call it 'no_dups' to hold numbers we see int eh nums array
+    # iterate through nums
+        # check to see if the number is already in the 'no_dups' array
+        # if it is, remove it from the 'no_dups' array
+    # when we're done iterating, the only number in our 'no_dups' array is the odd number out
+    # we'lll return it.
 
     pass
 
