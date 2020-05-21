@@ -3,9 +3,34 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
-    # Your code here
+    array_length = len(arr)
+    final_array = []
+    if array_length == 1:
+        return
 
-    pass
+    left = [0]*array_length
+    right = [0]*array_length
+
+    product = [0]*array_length
+
+    left[0] = 1
+
+    right[array_length - 1] = 1 
+    
+    for i in range(1, array_length):
+        left[i] = arr[i-1] * left[i - 1]
+        
+    for j in range(array_length-2, -1, -1):
+        right[j] = arr[j + 1] * right[j + 1]
+
+    for i in range(array_length):
+        product[i] = left[i] * right[i]
+
+    for i in range(array_length):
+        final_array.append(product[i])
+   
+    return final_array
+
 
 
 if __name__ == '__main__':
