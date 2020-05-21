@@ -4,8 +4,19 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
+    only_one = False
+    i = - 1
+    while not only_one and i < len(arr):
+        i += 1
+        if i == 0:
+            if arr[i] not in arr[i+1:len(arr)]:
+                only_one = True
+            # i += 1
+        else:
+            if arr[i] not in arr[:i] and arr[i] not in arr[i+1:len(arr)]:
+                only_one = True
 
-    pass
+    return arr[i]
 
 
 if __name__ == '__main__':
