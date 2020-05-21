@@ -5,8 +5,7 @@ Returns: a List of integers
 def moving_zeroes(arr):
     for index, i in enumerate(arr):
         if arr[index] != 0:
-            arr.pop(index)
-            arr.insert(0, i)
+            arr.insert(0, arr.pop(index))
 
     return arr
 
