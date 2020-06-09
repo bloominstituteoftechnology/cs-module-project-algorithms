@@ -17,23 +17,22 @@ def making_change(amount, coins, cache=None):
         if amount % coins[0] == 0:
             return 1
         return 0
-    
-    else:
-        if cache is None:
-            cache = {}
 
-        if (amount, len(coins)) in cache:
-            return cache[(amount, len(coins))]
+    if cache is None:
+        cache = {}
 
-        combinations = 0
-        for i in range(amount // coins[-1] + 1):
-            new_amount = amount - coins[-1] * i
-            if (new_amount, len(coins) - 1) not in cache:
-                cache[(new_amount, len(coins) - 1)] = making_change(new_amount,
-                                                                   coins[:-1],
-                                                                   cache)
-            combinations += cache[(amount - coins[-1] * i, len(coins) - 1)]
-        return combinations
+    if (amount, len(coins)) in cache:
+        return cache[(amount, len(coins))]
+
+    combinations = 0
+    for i in range(amount // coins[-1] + 1):
+        new_amount = amount - coins[-1] * i
+        if (new_amount, len(coins) - 1) not in cache:
+            cache[(new_amount, len(coins) - 1)] = making_change(new_amount,
+                                                                coins[:-1],
+                                                                cache)
+        combinations += cache[(amount - coins[-1] * i, len(coins) - 1)]
+    return combinations
 
 if __name__ == "__main__":
     # Test our your implementation from the command line
