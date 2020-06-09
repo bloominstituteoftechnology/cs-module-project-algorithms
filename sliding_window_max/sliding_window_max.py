@@ -9,8 +9,13 @@ def sliding_window_max(nums, k):
     Returns: a list of integers
     """
     maxima = [0] * (len(nums) - k + 1)
-    for i in range(len(nums) - k + 1):
-        maxima[i] = max(nums[i:i + k])
+
+    maxima[0] = max(nums[:k])
+    for i in range(1, len(nums) - k + 1):
+        if nums[i - 1] == maxima[i - 1]:
+            maxima[i] = max(nums[i:i + k])
+        else:
+            maxima[i] = max(maxima[i - 1], nums[i + k - 1])
 
     return maxima
 
