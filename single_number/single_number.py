@@ -4,7 +4,7 @@ Algorithms, problem 1.
 
 def single_number(arr):
     """
-    Input: a List of integers where every int except one shows up twice
+    Input: a list of integers where every int except one shows up twice
     Returns: an integer
     """
 
