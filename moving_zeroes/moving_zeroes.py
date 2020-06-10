@@ -3,9 +3,12 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def moving_zeroes(arr):
-    # Your code here
-
-    pass
+	# Your code here
+	count = arr.count(0)
+	for i in range(0, count):
+		arr.remove(0)
+		arr.append(0)
+	return arr # returns in 0.000s
 
 
 if __name__ == '__main__':
