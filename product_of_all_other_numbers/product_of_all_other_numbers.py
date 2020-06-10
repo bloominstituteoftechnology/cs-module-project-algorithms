@@ -4,8 +4,16 @@ Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
     # Your code here
+    my_arr = [0] * len(arr)
+    for i in range(0, len(arr)):
+    	copy = arr.copy()
+    	copy[i] = 1
+    	total = 1
+    	for val in copy:
+    		total = total * val
+    	my_arr[i] = total
 
-    pass
+    return my_arr # returns in 0.000s
 
 
 if __name__ == '__main__':
