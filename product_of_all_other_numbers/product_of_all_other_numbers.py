@@ -3,9 +3,20 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
-    # Your code here
+    l = len(arr)
+    ans = l * [0]
+    ans[0] = 1
 
-    pass
+
+    for i in range (1,l):
+        ans[i] = arr[i-1]*ans[i-1]
+
+    R =1
+    for i in reversed(range(l)):
+        ans[i] *= R
+        R *= arr[i]
+    
+    return ans
 
 
 if __name__ == '__main__':
