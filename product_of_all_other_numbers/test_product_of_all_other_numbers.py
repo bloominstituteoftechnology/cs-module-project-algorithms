@@ -2,6 +2,7 @@ import unittest
 import random
 from product_of_all_other_numbers import product_of_all_other_numbers
 
+
 class Test(unittest.TestCase):
     def test_product_of_all_other_numbers(self):
         self.assertEqual(product_of_all_other_numbers([9, 90]), [90, 9])
