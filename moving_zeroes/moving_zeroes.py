@@ -1,11 +1,21 @@
-'''
+"""
 Input: a List of integers
 Returns: a List of integers
-'''
+"""
+
+
 def moving_zeroes(arr):
     # Your code here
+    list = arr.count(0)
+    current = 0
 
-    pass
+    while current < list:
+        arr.pop(arr.index(0))
+        arr.append(0)
+
+        current += 1
+
+    return arr
 
 
 if __name__ == '__main__':
