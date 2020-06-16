@@ -17,7 +17,7 @@ by calculating
 
 In the above example, the final value at index 0 is the product of every number in the input array _except_ the number at index 0.
 
-Can you do this in `O(n)` time with `O(1)` space _without_ using division?
+Can you do this in `O(n)` time with `O(n)` space _without_ using division?
 
 ## Testing
 Run the test file by executing `python test_product_of_all_other_numbers.py`.
