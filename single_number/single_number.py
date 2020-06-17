@@ -3,9 +3,21 @@ Input: a List of integers where every int except one shows up twice
 Returns: an integer
 '''
 def single_number(arr):
-    # Your code here
+    # use a set to store single numbers
+    # iterate through numbers in array
+    # if set doesn't contain number, add it to set
+    # if the number comes up again, remove from set
+    # return the only number in the set
 
-    pass
+    single_numbers = set()
+
+    for number in arr:
+        if number not in single_numbers: 
+            single_numbers.add(number)
+        else:
+            single_numbers.remove(number)
+
+    return single_numbers.pop()
 
 
 if __name__ == '__main__':
