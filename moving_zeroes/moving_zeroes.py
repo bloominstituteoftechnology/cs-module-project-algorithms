@@ -54,12 +54,12 @@ if __name__ == '__main__':
 
 import time
 
-zeros = [0] * 1000000
+zeroes = [0] * 1000000
 
 start_time = time.time()
 
-moving_zeroes(zeros)
+moving_zeroes(zeroes)
 
 end_time = time.time()
 
-print(f"Moving zeros took {end_time - start_time}")
+print(f"Moving zeroes took {end_time - start_time}")
