@@ -11,16 +11,17 @@ def moving_zeroes(arr):
     """
     
     zeroes = []
+    non_zeroes = []
     
-    for num in arr:
-        if num == 0:
+    for num in arr: # ---> O(n)
+        if num != 0:
+            non_zeroes.append(num)
+        else:
             zeroes.append(num)
-            arr.remove(num)
-        
-    # arr = arr + zeroes
+            
+    answer = non_zeroes + zeroes
     
-    return arr + zeroes
-
+    return answer
 
 if __name__ == '__main__':
     # Use the main function here to test out your implementation
