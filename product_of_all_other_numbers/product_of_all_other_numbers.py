@@ -2,10 +2,28 @@
 Input: a List of integers
 Returns: a List of integers
 '''
+
 def product_of_all_other_numbers(arr):
     # Your code here
 
-    pass
+    #pass
+
+    n = len(arr)
+
+    products = [0] * n
+
+    products[0] = 1
+
+    for i in range(1, n):
+        products[i] = arr[i-1] * products[i-1]
+
+    R = 1
+
+    for i in reversed(range(n)):
+        products[i] = products[i] * R
+        R *= arr[i]    
+
+    return products
 
 
 if __name__ == '__main__':
