@@ -8,7 +8,7 @@
 
 ## Objectives
 
-* effectively ask for help by giving the expected vs. experienced behavior, explaining what specific actions they've taken so far, and providing all relevant information and code
+* effectively ask for help by giving the expected vs. experienced behavior, explaining what specific actions they've taken so far, and providing all relevant information and code.
 * interpret a problem, specification, or diagram and construct a plan for implementing a solution in code
 * implement a first-pass solution after selecting from a naïve, brute-force, or greedy approach
 * evaluate a first-pass solution and reflect on its validity to decide if the solution needs revision
