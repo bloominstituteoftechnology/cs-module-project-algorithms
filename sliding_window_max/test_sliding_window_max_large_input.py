@@ -6,14 +6,15 @@ class Test(unittest.TestCase):
     def test_sliding_window_max_large_input(self):
         arr = []
         k = 1000
-
-        with open("data/input.txt") as file:
+        
+        # sliding_window_max/data/input.txt
+        with open("sliding_window_max/data/input.txt") as file:
             for line in file:
                 arr.append(int(line.strip()))
 
         expected = []
 
-        with open("data/output.txt") as file:
+        with open("sliding_window_max/data/output.txt") as file:
             for line in file:
                 expected.append(int(line.strip()))
 
