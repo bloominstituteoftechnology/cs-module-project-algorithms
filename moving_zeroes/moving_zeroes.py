@@ -26,3 +26,11 @@ if __name__ == '__main__':
     arr = [0, 3, 1, 0, -2]
 
     print(f"The resulting of moving_zeroes is: {moving_zeroes(arr)}")
+
+# # a one pass solution 
+# def moving_zeroes(arr):
+#     for i in range(len(arr)): # loop through each item of the input list
+#         x = arr[i]
+#         if x != 0: # if the item is non-zero
+#             arr = [x] + arr[:i] + arr[i+1:] # extract from the list and place at the beginning
+#     return arr

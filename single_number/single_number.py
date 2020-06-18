@@ -46,3 +46,37 @@ if __name__ == '__main__':
     arr = [1, 1, 4, 4, 5, 5, 3, 3, 9, 0, 0]
 
     print(f"The odd-number-out is {single_number(arr)}")
+
+'''
+What are arrays NOT good at? Are they the best option when we are searching for a particular value?
+What is the runtime complexity of that search, in the worst case?
+'''
+
+# def single_number(nums): # one possible first-pass solution
+#     no_dups = [] # create an array, to hold numbers we see in the nums array
+#     for num in nums: # loop over nums array
+#         if num not in no_dups: # check to see if the number is already in the no_dups array
+#             no_dups.append(num) # if it's not, append it to the no_dups array
+#         else: # otherwise
+#             no_dups.remove(num) # remove it from the no_dups array
+#     return no_dups[0] # when loop is done, the only number in our no_dups array is the odd number out
+
+# def single_number_optimized(nums):
+#     counts = {} # keep track of number of times an item occurs in input
+
+#     for num in nums: # loop through input list
+#         if num in counts: # check if item is in counts
+#             del counts[num] # remove item
+#         else: # otherwise
+#             counts[num] = 1 # add item 
+
+#     for k, v in counts.items(): # for key, value 
+#         if v == 1:
+#             return k
+
+
+        
+
+
+    
+
