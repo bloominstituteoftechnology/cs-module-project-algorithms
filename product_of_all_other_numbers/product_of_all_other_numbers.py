@@ -2,24 +2,34 @@
 Input: a List of integers
 Returns: a List of integers
 '''
-def product_of_all_other_numbers(arr):
-    # [1, 7, 3, 4]
-    # ----------->
-    # [7*3*4, 1*3*4, 1*7*4, 1*7*3]
+# First pass solution
+# def product_of_all_other_numbers(arr):
+#     # [1, 7, 3, 4]
+#     # ----------->
+#     # [7*3*4, 1*3*4, 1*7*4, 1*7*3]
     
-    # initialize product_arr
-    product_arr = []
+#     # initialize product_arr
+#     product_arr = []
 
-    # multiply the elements one by one
+#     # multiply the elements one by one
+#     for i in range(len(arr)):
+#         result = 1
+#         for element in arr:
+#             result *= element
+#         result /= arr[i]
+#         product_arr.append(result)
+#     return product_arr
+
+# Optimized solution
+from functools import reduce
+
+def product_of_all_other_numbers(arr):
+    product_arr = []
     for i in range(len(arr)):
-        result = 1
-        for element in arr:
-            result *= element
-        result /= arr[i]
+        temp_arr = arr[:i]+arr[i+1:]
+        result = reduce((lambda x, y: x*y), temp_arr)
         product_arr.append(result)
     return product_arr
-
-
 
 if __name__ == '__main__':
     # Use the main function to test your implementation

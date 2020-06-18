@@ -2,6 +2,9 @@
 Input: a List of integers as well as an integer `k` representing the size of the sliding window
 Returns: a List of integers
 '''
+
+# This first pass solution is already in O(n)
+
 def sliding_window_max(nums, k):
     # initialize a resulted array
     resulted_array = []
