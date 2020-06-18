@@ -3,32 +3,54 @@ Input: a List of integers
 Returns: a List of integers
 '''
 
+### DAY 3: First Pass Solution ###
+# def product_of_all_other_numbers(arr):
+#     # receives an array of ints [1, 7, 3, 4] arr
+#     # loop within a loop
+#         # declare a variable for index
+#         # check to see if we're on that index in the loop
+#             # if we're on that index, ignore that index's value (skip) and keep going (increase index)
+#             # otherwise, multiple all values together and keep going (increase index)
+#         # insert each answer into a new array
+#     # returns new array
+
+#     current_index = 0
+#     new_array = []
+
+#     while current_index < len(arr): # start "counter" loop
+#         inside_index = 0 # counter for inside loop
+#         result = 1 # need this to multiply elements
+#         while inside_index < len(arr): # loop over array for each item
+#             if inside_index == current_index: # if the inside index is the same amount of times as the current index
+#                 inside_index += 1 # then increment the inside counter loop by 1
+#             else: # otherwise
+#                 result = result * arr[inside_index] # multiple the items together
+#                 inside_index += 1 # increment the inside counter loop by 1
+#         new_array.append(result) # append result to new array
+#         current_index += 1 # increment index for outer loop by 1
+#     return new_array
+
+
+### DAY 4: FUNCTION OPTIMIZED ###
 def product_of_all_other_numbers(arr):
-    # receives an array of ints [1, 7, 3, 4] arr
-    # loop within a loop
-        # declare a variable for index
-        # check to see if we're on that index in the loop
-            # if we're on that index, ignore that index's value (skip) and keep going (increase index)
-            # otherwise, multiple all values together and keep going (increase index)
-        # insert each answer into a new array
-    # returns new array
+    new_array = [1]
+    length = len(arr)
 
-    current_index = 0
-    new_array = []
+    # Run forwards through the list muliplying by the cumulative product of the elements before
+    running_product = 1
+    for i in arr[:-1]: 
+        running_product *= i
+        new_array.append(running_product)
 
-    while current_index < len(arr): # start "counter" loop
-        inside_index = 0 # counter for inside loop
-        result = 1 # need this to multiply elements
-        while inside_index < len(arr): # loop over array for each item
-            if inside_index == current_index: # if the inside index is the same amount of times as the current index
-                inside_index += 1 # then increment the inside counter loop by 1
-            else: # otherwise
-                result = result * arr[inside_index] # multiple the items together
-                inside_index += 1 # increment the inside counter loop by 1
-        new_array.append(result) # append result to new array
-        current_index += 1 # increment index for outer loop by 1
+    # Run backwards though the list multiplying by the cumulative product of the elements after
+    running_product = 1
+    for i in range(length-1, 0, -1):
+        running_product *= arr[i]
+        new_array[i - 1] *= running_product
+    
     return new_array
-        
+    
+
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
