@@ -5,8 +5,6 @@ Returns: a List of integers
 def product_of_all_other_numbers(arr):
     # Your code here
 
-    pass
-
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
@@ -20,10 +18,10 @@ Plan
     Create var mult
     Loop through array
         -Use * for multiplying array elements 
-        -Loop through array again
-            -Use / for dividing mult with item in list
-            -Use int to convert value to integers
-        -Return arr
+    Loop through array again
+        -Use / for dividing mult with item in list
+        -Use int to convert value to integers
+    Return arr
 """
 
 
@@ -32,9 +30,9 @@ Pseudocode
     Init mult with value 1
     Loop through the array 
         -Multiply mult with item in the list
-        -Loop through array again
-            -Divide mult with item in the list
-            -Convert the float value to int
-        -Return arr 
+    Loop through array again
+        -Divide mult with item in the list
+        -Convert the float value to int
+    Return arr 
 
 """
