@@ -23,4 +23,9 @@ Plan
 """
 """
 Pseudocode
+    Loop through the array
+    If item in array is equal to zero
+        - remove the item from the array
+        - add the item to the end of the list    
+    return index of the first occurence of 0
 """
