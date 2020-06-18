@@ -14,9 +14,17 @@ if __name__ == '__main__':
 
     print(f"The odd-number-out is {single_number(arr)}")
 """"
-    PLAN
+PLAN
   Create a variable ans  
   Loop through arr list
     - Use ^ to perform an XOR operation to remove the odd number
   Return ans 
+"""
+
+"""
+Pseudocode
+    Init ans var with 0
+    Loop through given array
+        - XOR ans with the item in list
+    Return ans 
 """
