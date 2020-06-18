@@ -8,7 +8,7 @@ def moving_zeroes(arr):
         if i == 0 :
             arr.remove(i)
             arr.append(i)
-    return arr.index(0)
+    return arr
     
 
 
@@ -23,7 +23,7 @@ Plan
     Loop through the array
     Check for zeros
     use list.remove and list.append
-    return index of 0 in array
+    return array
 """
 """
 Pseudocode
@@ -31,5 +31,5 @@ Pseudocode
     If item in array is equal to zero
         - remove the item from the array
         - add the item to the end of the list    
-    return index of the first occurence of 0
+    return arr
 """
