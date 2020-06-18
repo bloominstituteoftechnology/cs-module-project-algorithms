@@ -2,20 +2,34 @@
 Input: a List of integers where every int except one shows up twice
 Returns: an integer
 '''
+# First Pass Solution
+
+# def single_number(arr):
+#     # Your code here
+#     unique = set()
+#     double_total = 0
+#     single_total = 0
+#     for item in arr:
+#         double_total += item
+#         if unique.__contains__(item):
+#             continue
+#         else:
+#             unique.add(item)
+#             single_total += item
+#     return (single_total * 2) - double_total
+
+# From Lecture Optimized Solution
+
 def single_number(arr):
     # Your code here
-    unique = set()
-    double_total = 0
-    single_total = 0
-    # loop through input list
+    a_dict = dict()
+    count = 1
     for item in arr:
-        double_total += item
-        if unique.__contains__(item):
-            continue
+        if a_dict.__contains__(item):
+            a_dict.__delitem__(item)
         else:
-            unique.add(item)
-            single_total += item
-    return (single_total * 2) - double_total
+            a_dict[item] = "Unique"
+    return list(a_dict.keys())[0]
 
 foo = [2, 2, -1, -1, -12]
 x = single_number(foo)
