@@ -2,20 +2,24 @@
 Input: an integer
 Returns: an integer
 '''
-def eating_cookies(n, cache=None):
-    # Your code here
-    if n == 0:
+def eating_cookies(cookies, cache = []):
+    # exit when there 's no cookies
+    if cookies < 0:
+        return 0
+    # exit when there 's only 1 cookie
+    elif cookies <= 1:
         return 1
-    elif n < 3:
-        return n
-    elif cache and cache[n] > 0:
-        return cache[n]
+    # get combinations from cache
+    elif cache[cookies]>0:
+        return cache[cookies]
     else:
-        if not cache:
-            cache = {i: 0 for i in range(n+1)}
-        cache[n] = eating_cookies(
-            n-1, cache) + eating_cookies(n-2, cache) + eating_cookies(n-3, cache)
-        return cache[n]
+        # calculate number of combinations
+        result = eating_cookies(cookies - 3, cache) + eating_cookies(cookies - 2, cache) + eating_cookies(cookies - 1, cache)
+        cache[cookies] = result
+        return result
+        
+        
+
 
 if __name__ == "__main__":
     # Use the main function here to test out your implementation
