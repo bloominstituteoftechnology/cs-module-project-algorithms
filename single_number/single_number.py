@@ -5,6 +5,7 @@ Returns: an integer
 def single_number(arr):
     # Your code here
 
+    # Old Code, runtime of about O(1.5n), 0.023s
     # start by seperating lists
     list1 = []
     list2 = []
@@ -18,6 +19,9 @@ def single_number(arr):
         if n not in list2:
             return n
     return -1
+
+    # After experimenting with a couple ideas, I think this
+    # is the best solution I can come up with
 
 if __name__ == '__main__':
     # Use the main function to test your implementation

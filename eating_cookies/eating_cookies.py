@@ -3,6 +3,8 @@ Input: an integer
 Returns: an integer
 '''
 # Your code here
+
+# Old Code:
 def sub(n):
     # callback, check if even (1 way) or under (0 ways)
     w = 0 # ways to eat cookies
@@ -36,6 +38,17 @@ def eating_cookies(n, arr=None):
         arr[i] = arr[i-3] + arr[i-2] + arr[i-1]
 
     return arr[-2]
+
+# For the recursive portion of the code, the runtime is
+# exponential, I don't know by how much, but it rises very quickly
+# after about an input value of 10.
+
+# The mathematical portion of the code uses simple math
+# to calculate the values using a pattern I noticed when
+# looking at the results of inputs from 1 to 10.
+# This portion of the code has a runtime of O(n), where n is the
+# value inputted, and can run larger values much quicker than
+# the recursive portion.
 
 if __name__ == "__main__":
     # Use the main function here to test out your implementation
