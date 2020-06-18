@@ -4,7 +4,7 @@ Returns: an integer
 '''
 
 ### DAY 3: First Pass Solution ###
-# def eating_cookies(n, cache=None): # Naive recursive brute-force solution. O(3^n) time, O(3^n) space
+# def eating_cookies(n): # Naive recursive brute-force solution. O(3^n) time, O(3^n) space
 #     if n < 0:
 #         return 0
 #     elif n == 0:
