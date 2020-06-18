@@ -3,10 +3,16 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
-    # Your code here
+    prods = []
+    for i, _ in enumerate(arr):
+        nums = arr.copy()
+        nums.pop(i)
+        prod = 1
+        for n in nums:
+            prod *= n
+        prods.append(prod)
 
-    pass
-
+    return prods
 
 if __name__ == '__main__':
     # Use the main function to test your implementation

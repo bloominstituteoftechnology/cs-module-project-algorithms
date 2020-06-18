@@ -5,8 +5,19 @@ Returns: an integer
 def single_number(arr):
     # Your code here
 
-    pass
+    # start by seperating lists
+    list1 = []
+    list2 = []
+    for n in arr:
+        if n not in list1:
+            list1.append(n)
+        else:
+            list2.append(n)
 
+    for n in list1:
+        if n not in list2:
+            return n
+    return -1
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
