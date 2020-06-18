@@ -11,7 +11,7 @@ def sliding_window_max(nums, k):
     for i in range(len(nums) - k + 1):
         small = nums[i : i + k]
         window.append(max(small))
-    return window
+    return window  # SMALL Ran 3 tests in 0.000s, LARGE Ran 1 test in 11.357s
 
 
 if __name__ == "__main__":

@@ -14,7 +14,7 @@ def product_of_all_other_numbers(arr):
         for item in arr_copy:
             total = total * item
         arr_new[i] = total
-    return arr_new
+    return arr_new  # Ran 1 test in 0.000s
 
 
 if __name__ == "__main__":

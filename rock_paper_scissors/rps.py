@@ -20,7 +20,7 @@ def rock_paper_scissors(n):
             for move in moves:
                 list_new.append(item + [move])
         passed = list_new
-    return list_new
+    return list_new  # Ran 1 test in 0.000s
 
 
 if __name__ == "__main__":
