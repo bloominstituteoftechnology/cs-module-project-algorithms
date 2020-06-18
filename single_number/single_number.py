@@ -2,44 +2,68 @@
 Input: a List of integers where every int except one shows up twice
 Returns: an integer
 '''
-def single_number(arr):
-    # takes in an array
-    # probably will loop over each number (for loop or while loop?)
-    # could we sort the array for faster looping?
-        # the array needs to have even number of elements to do comparison 
-    # do we need to declare any varibles, maybe a counter or index?
-    # may need to do some check of does this element == next element
-        # if so, that element is a duplicate
-        # else, this is the single number
+
+### DAY 3: First Pass Solution ###
+# def single_number(arr):
+#     # takes in an array
+#     # probably will loop over each number (for loop or while loop?)
+#     # could we sort the array for faster looping?
+#         # the array needs to have even number of elements to do comparison 
+#     # do we need to declare any varibles, maybe a counter or index?
+#     # may need to do some check of does this element == next element
+#         # if so, that element is a duplicate
+#         # else, this is the single number
     
+#     index = 0
+#     single_element = None
+#     length = len(arr)
+
+#     arr.sort()
+  
+#     if length % 2 == 0: # even length of array (to compare a pair of numbers)
+#         while index < length:
+#             current_element = arr[index]
+#             next_element = arr[index + 1]
+#             if current_element == next_element:
+#                 index = index + 2
+#             else:
+#                 single_element = current_element 
+#                 break # need to exit the loop if you found the number
+#         return single_element
+#     else: # odd length of array
+#         last_element = arr[-1] # declare a variable to hold the last element in the array
+#         while index < length-1: # loop through UNTIL the last element
+#             current_element = arr[index]
+#             next_element = arr[index + 1]
+#             if current_element == next_element:
+#                 index = index + 2
+#             else:
+#                 single_element = current_element 
+#                 break # need to exit the loop if you found the number
+#         return single_element or last_element 
+
+
+### DAY 4: FUNCTION OPTIMIZED ###
+def single_number(arr):
     index = 0
     single_element = None
     length = len(arr)
-
+    
     arr.sort()
-  
-    if length % 2 == 0: # even length of array (to compare a pair of numbers)
-        while index < length:
-            current_element = arr[index]
-            next_element = arr[index + 1]
-            if current_element == next_element:
-                index = index + 2
-            else:
-                single_element = current_element 
-                break # need to exit the loop if you found the number
-        return single_element
-    else: # odd length of array
-        last_element = arr[-1] # declare a variable to hold the last element in the array
-        while index < length-1: # loop through UNTIL the last element
-            current_element = arr[index]
-            next_element = arr[index + 1]
-            if current_element == next_element:
-                index = index + 2
-            else:
-                single_element = current_element 
-                break # need to exit the loop if you found the number
-        return single_element or last_element 
 
+    if length % 2 == 1:
+        length = len(arr)-1
+    while index < length: 
+        current_element = arr[index]
+        next_element = arr[index + 1]
+        last_element = arr[-1]
+        if current_element == next_element:
+            index = index + 2
+        else:
+            single_element = current_element 
+            break
+    return single_element or last_element
+    
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
@@ -61,6 +85,7 @@ What is the runtime complexity of that search, in the worst case?
 #             no_dups.remove(num) # remove it from the no_dups array
 #     return no_dups[0] # when loop is done, the only number in our no_dups array is the odd number out
 
+
 # def single_number_optimized(nums):
 #     counts = {} # keep track of number of times an item occurs in input
 
@@ -73,10 +98,3 @@ What is the runtime complexity of that search, in the worst case?
 #     for k, v in counts.items(): # for key, value 
 #         if v == 1:
 #             return k
-
-
-        
-
-
-    
-
