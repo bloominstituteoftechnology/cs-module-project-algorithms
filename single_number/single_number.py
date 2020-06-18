@@ -5,7 +5,10 @@ Returns: an integer
 def single_number(arr):
     # Your code here
 
-    pass
+    ans = 0
+    for i in arr:
+        ans = ans^i
+    return ans
 
 
 if __name__ == '__main__':
