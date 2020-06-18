@@ -3,10 +3,13 @@ Input: an integer
 Returns: an integer
 '''
 def eating_cookies(cookies, cache = []):
-    # exit when there 's no cookies
+    # construct cache
+    if len(cache) is 0:
+        cache = [0] * (cookies + 1)
+    # Number of cookies is less thn 0 , return 0
     if cookies < 0:
         return 0
-    # exit when there 's only 1 cookie
+    # Number of cookies is less or equal to 1, return 1
     elif cookies <= 1:
         return 1
     # get combinations from cache
