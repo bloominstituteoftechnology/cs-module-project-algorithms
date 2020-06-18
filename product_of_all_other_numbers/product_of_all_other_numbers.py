@@ -25,3 +25,16 @@ Plan
             -Use int to convert value to integers
         -Return arr
 """
+
+
+"""
+Pseudocode
+    Init mult with value 1
+    Loop through the array 
+        -Multiply mult with item in the list
+        -Loop through array again
+            -Divide mult with item in the list
+            -Convert the float value to int
+        -Return arr 
+
+"""
