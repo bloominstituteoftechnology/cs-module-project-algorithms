@@ -4,8 +4,17 @@ Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
     # Your code here
-
-    pass
+    multipliers = []
+    for i in range(len(arr)):
+        curr = 1
+        for elem in multipliers:
+            curr = curr * elem 
+        if i > 0:
+            for j in range(i-1, -1, -1):
+                arr[j] = arr[j] * arr[i]
+        multipliers.append(arr[i])
+        arr[i] = curr
+    return arr
 
 
 if __name__ == '__main__':

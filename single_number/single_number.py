@@ -4,8 +4,16 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
+    memory = {}
+    potential = []
 
-    pass
+    for elem in arr:
+        if elem in memory:
+            potential.remove(elem)
+        else:
+            memory[elem] = True 
+            potential.append(elem)
+    return potential[0]
 
 
 if __name__ == '__main__':
