@@ -1,18 +1,18 @@
-# Module Project - Algorithms
+# Module Project - Algorithms.
 
 ## Sprint: Algorithms
 
 ## Modules: A First-Pass Solution and Writing Better Solutions
 
-*Note: this module project repository is for Module 3 (A First-Pass Solution) and Module 4 (Writing Better Solutions) of the Algorithms Sprint.*
+_Note: this module project repository is for Module 3 (A First-Pass Solution) and Module 4 (Writing Better Solutions) of the Algorithms Sprint._
 
 ## Objectives
 
-* effectively ask for help by giving the expected vs. experienced behavior, explaining what specific actions they've taken so far, and providing all relevant information and code
-* interpret a problem, specification, or diagram and construct a plan for implementing a solution in code
-* implement a first-pass solution after selecting from a naïve, brute-force, or greedy approach
-* evaluate a first-pass solution and reflect on its validity to decide if the solution needs revision
-* apply techniques such as memoization or heuristics to improve an existing first-pass solution
+- effectively ask for help by giving the expected vs. experienced behavior, explaining what specific actions they've taken so far, and providing all relevant information and code
+- interpret a problem, specification, or diagram and construct a plan for implementing a solution in code
+- implement a first-pass solution after selecting from a naïve, brute-force, or greedy approach
+- evaluate a first-pass solution and reflect on its validity to decide if the solution needs revision
+- apply techniques such as memoization or heuristics to improve an existing first-pass solution
 
 ## Introduction
 
@@ -26,18 +26,18 @@ Each directory contains a separate problem that you must solve. Inside each dire
 
 There isn't an official prescribed order for tackling the problems, though a subjective ranking of the given problems from easiest to hardest might go something like this:
 
- 1. `single_number`
- 2. `moving_zeroes`
- 3. `product_of_all_other_numbers`
- 4. `sliding_window_max`
- 5. `eating_cookies`
+1.  `single_number`
+2.  `moving_zeroes`
+3.  `product_of_all_other_numbers`
+4.  `sliding_window_max`
+5.  `eating_cookies`
 
 For each problem, `cd` into the directory, read the instructions for the challenge, implement your solution in the skeleton file, then test it using the provided test file.
 
 The later problems get progressively more difficult, especially when
 it comes to deriving a more performant solution. Don't feel bad if you aren't able to figure them out within the project's timeframe. Again, always remember that so long as you put in an earnest effort into attempting to solve these problems, you're learning and getting better. Getting the 'right answer' is just the proverbial cherry on top of the sundae.
 
-*Note: Remember, you need to get a first-pass solution for each of the problems for the Module 3 Project. For the Module 4 Project, you will work on improving those solutions and optimizing them for performance.*
+_Note: Remember, you need to get a first-pass solution for each of the problems for the Module 3 Project. For the Module 4 Project, you will work on improving those solutions and optimizing them for performance._
 
 ## Resources
 
