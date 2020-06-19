@@ -2,10 +2,18 @@
 Input: a List of integers
 Returns: a List of integers
 '''
-def product_of_all_other_numbers(arr):
+def product_of_all_other_numbers(arr): #it returns an array of all the products except for the index element(at the index)
     # Your code here
+    new_product = [] #holds all new product values
+    for x in range(0, len(arr)): #loop through the product array
+        new_item = 1 #assigning index value to 1 in array we are looping through, so it wont affect outcome
+        for y in range(0, len(arr)): #we are looping through original array
+            if y != x: #if y element does not = the x element, that means the index doesnt match 
+                new_item *= arr[y] #because the index doesnt match we dont include it (when we calculate product) , we include everything buy index
+        new_product.append(new_item) #add our new products into product array
+    return new_product #returning new product array
 
-    pass
+    
 
 
 if __name__ == '__main__':
