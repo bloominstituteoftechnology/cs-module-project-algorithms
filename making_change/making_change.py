@@ -3,7 +3,7 @@
 import sys
 
 
-def making_change(amount, denominations, cache=None):
+def making_change(amount, denominations, cache = None):
     # Your code here
     if cache == None:
         cache = [0] * (amount + 1)
