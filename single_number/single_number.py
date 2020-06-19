@@ -6,8 +6,8 @@ def single_number(arr):
     # Your code here
     placeHolder = []
     for i in arr:                  # loop through given array
-        if i in placeHolder:         # if the current number already 
-            placeHolder.remove(i)       # remove it from place holder
+        if i in placeHolder:         # if the current number is already in placeholder
+            placeHolder.remove(i)       # remove it from placeholder
         else:
             placeHolder.append(i)  # if the number does not exist add it to placeholder
     return placeHolder[0]               
