@@ -3,9 +3,19 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
+    array1 = []
+    length = len(arr)
     # Your code here
 
-    pass
+    #length = 
+    if n == 0:
+
+    for x in range(len(arr)):
+        if x != 
+        array1.append([array1[x+1]])
+        
+
+    
 
 
 if __name__ == '__main__':
