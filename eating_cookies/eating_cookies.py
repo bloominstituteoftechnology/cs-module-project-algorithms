@@ -24,9 +24,9 @@ def eating_cookies(n, cache=None):
     else:
         if not cache:
             #dictonary
-            cache = {i: 0 for i in range(n+1)}
+            #cache = {i: 0 for i in range(n+1)}
             #list
-            #cache = [0 for _ in range(n+1)] 
+            cache = [0 for _ in range(n+1)] 
         #we will save our answer to cache
         cache[n] = eating_cookies(n-1, cache) + eating_cookies(n-2, cache) + eating_cookies(n-3, cache)
     return cache[n]

@@ -8,7 +8,12 @@ def moving_zeroes(arr):
         x = arr[i]
 
         if x != 0:
+            print('[x]:',[x])
+            print('arr[:i]', arr[:i])
+            print('arr[i+1:]', arr[i+1:])
+            # replaces the non-zero value in the front of the array
             arr = [x] + arr[:i] + arr[i+1:]
+            print(arr)
     return arr
 
 
