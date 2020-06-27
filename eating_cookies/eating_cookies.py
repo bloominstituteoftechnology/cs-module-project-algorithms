@@ -12,7 +12,7 @@ Returns: an integer
 #if not in cache continue with same logic.
 def eating_cookies(n, cache=None):
     #base case: no more cookies
-    total = 0
+    
     if n == 0:
         #return 1 because this recursion will be valid
         return 1

@@ -14,7 +14,7 @@ def rock_paper_scissors(n):
     return plays
   #recursive runs and returns plays until 0
   for newList in rock_paper_scissors(n-1):
-    
+    #loop through all options and add it to the existing list
     for play in plays:
       print('newList', newList)
       game.append(newList + play)
