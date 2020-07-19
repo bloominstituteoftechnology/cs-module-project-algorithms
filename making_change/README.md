@@ -27,7 +27,7 @@ You can also test your implementation manually by executing `python making_chang
 
  * This problem can be thought of as a more difficult version of the climbing stairs problem. 
  * As far as base cases go, again, think about some cases where we'd want the recursion to stop executing. What should happen when the amount of cents given is 0? What should happen when the amount of cents given is negative? What about when we've used up all of the available coin denominations?
- * As far as performance optimizations go, caching/memoization might be one avenue we could go down. 
+ * As far as performance optimizations go, caching/memorization might be one avenue we could go down. 
  * Building up values in our cache in an iterative fashion might also be a good way to go about improving our implementation. 
  
    Here's a general idea: we can initialize a cache as a list (a dictionary would work fine as well) of 0s with a length equal to the amount we're looking to make change for. Each value of the list will represent the number of ways to make `i` cents, where `i` are the indices of the list. So `cache[10] == 4` from our example above. Since we know there is one way to make 0 cents in change, we'll initialize `cache[0] = 1` (you can seed entries for additional values as well, though you don't actually need to). 
