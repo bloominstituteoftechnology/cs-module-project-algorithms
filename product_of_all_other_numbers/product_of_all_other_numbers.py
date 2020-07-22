@@ -3,10 +3,11 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
-    # Your code here
+    result = 1
 
-    pass
-
+    for x in arr:
+        result *= x
+    return [result / x for x in arr]
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
