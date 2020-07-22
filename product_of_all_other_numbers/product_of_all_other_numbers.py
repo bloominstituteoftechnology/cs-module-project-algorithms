@@ -3,23 +3,15 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
-
 	finalArr = []
-	tempArr = []
-	index = 0
 
 	for num in arr: # iterate through list
-		print("\n",num, "at index: ", index)
-		secondIndex = 0
 		product = 1
 
 		for num2 in arr:
 			product = product * num2
-			print(num2)
-
-		product = int(product / num)
+		product = int(product / num) # undo itself
 		finalArr.append(product)
-		index += 1
 
 	return finalArr	
 
