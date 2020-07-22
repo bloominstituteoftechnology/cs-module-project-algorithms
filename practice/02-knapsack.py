@@ -32,7 +32,6 @@ weight = 0
 
 def brute_force_fill_knapsack(sack, items):
   '''Try every combination to find the best.'''
-
   # generate all possible combinations of items
   combos = []
   sack = []
