@@ -13,19 +13,20 @@ def product_of_all_other_numbers(arr):
             # slice index to remove value
         # np.prod(new_array)
     arr = np.array(arr)
+    list_ = []
     for val in arr:
         index = np.where(arr == val)[0][0]
         if index == 0:
-            product_arr = arr[index + 1:]
+            drop_arr = arr[index + 1:]
         elif index == len(arr):
-            product_arr = arr[:index]
+            drop_arr = arr[:index]
         else:
-            product_arr = list(arr[:index]) + list(arr[index + 1:])
-            product_arr = np.array(product_arr)
+            drop_arr = list(arr[:index]) + list(arr[index + 1:])
+            drop_arr = np.array(drop_arr)
 
-        print(product_arr)
+        list_.append(drop_arr)
 
-        
+    return [np.prod(array) for array in list_]
 
 
 if __name__ == '__main__':
@@ -36,6 +37,6 @@ if __name__ == '__main__':
     # arr = np.array(arr)
     # print(np.where(arr == 1)[0][0])
 
-    product_of_all_other_numbers(arr)
+    print(product_of_all_other_numbers(arr))
 
     # print(f"Output of product_of_all_other_numbers: {product_of_all_other_numbers(arr)}")
