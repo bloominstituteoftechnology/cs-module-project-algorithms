@@ -5,8 +5,9 @@ Returns: an integer
 
 
 def single_number(arr):
-    a = set(i for i in arr if arr.count(i) == 1)
-    return list(a)[0]
+
+    a = [i for i in arr if arr.count(i) == 1]
+    return a[0]
 
 
 # if __name__ == '__main__':
