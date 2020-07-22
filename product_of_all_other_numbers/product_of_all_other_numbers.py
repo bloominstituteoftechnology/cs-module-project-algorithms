@@ -4,8 +4,29 @@ Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
     # Your code here
-
-    pass
+    current_index = 0
+    new_array = []
+# Start counter loop
+    while current_index < len(arr):
+        # Counter for inside loop
+        inside_index = 0
+        result = 1
+        # loop over array for each item
+        while inside_index < len(arr):
+            # If the inside index is the same amount of times as the current index
+            if inside_index == current_index:
+                # Then increment the inside counter loop by 1
+                inside_index += 1
+            else:
+                # Increment the inside counter loop by 1 
+                result = result * arr[inside_index]
+                # Increment the inside counter loop by 1
+                inside_index += 1
+                # Append result to new array
+        new_array.append(result)
+        # Increment index for outer loop by 1
+        current_index += 1
+    return new_array
 
 
 if __name__ == '__main__':
