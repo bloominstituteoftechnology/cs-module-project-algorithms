@@ -4,9 +4,19 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
+    x = 0   
+    for i in arr:
+         x ^= i
+    return x
 
-    pass
-
+    # SEAN'S CODE
+    # s = set()
+    # for x in arr:
+    #     if x in s:
+    #         s.remove(x)
+    #     else:
+    #         s.add(x)
+    # return list(s)[0]             
 
 if __name__ == '__main__':
     # Use the main function to test your implementation

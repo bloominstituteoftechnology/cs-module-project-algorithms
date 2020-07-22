@@ -4,8 +4,10 @@ Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
     # Your code here
-
-    pass
+    x = 1
+    for i in arr:
+        x *= i
+    return [x / i for i in arr]
 
 
 if __name__ == '__main__':

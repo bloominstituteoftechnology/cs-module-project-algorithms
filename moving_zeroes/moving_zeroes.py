@@ -2,11 +2,29 @@
 Input: a List of integers
 Returns: a List of integers
 '''
+# def moving_zeroes(arr):
+#     # Your code here
+#     for i in arr:
+#         if i != 0:
+#             old_index = arr.index(i)
+#             new_index = 0
+#             arr.insert(new_index, arr.pop(old_index))
+            
+#     return arr
+
 def moving_zeroes(arr):
-    # Your code here
+    length = len(arr)
+    count = 0
+    
+    for i in range(length):
+        if arr[i] != 0:
+            arr[count] = arr[i]
+            count += 1
 
-    pass
-
+    while count < length:
+        arr[count] = 0
+        count += 1
+    return arr
 
 if __name__ == '__main__':
     # Use the main function here to test out your implementation
