@@ -3,9 +3,20 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
-    # Your code here
-
-    pass
+    # loop through arr
+    mult_arr = []
+    for i in range(0, len(arr)):
+        # assign 1 to temp value
+        temp = 1
+        # loop through arr again
+        for j in range(0, len(arr)):
+            # if index is not current index
+            if j != i:
+                # multiply value by itself
+                temp *= arr[j]
+        # append temp to new array
+        mult_arr.append(temp)
+    return mult_arr
 
 
 if __name__ == '__main__':
