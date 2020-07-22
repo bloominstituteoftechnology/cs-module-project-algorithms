@@ -14,17 +14,21 @@ def sliding_window_max(nums, k):
     Returns:
         list of ints consisting of max value of each window
     '''
-    # an empty list of big nums
-    big_nums = []
-    # loop through the list
-    for i in range(len(nums) - k + 1):
-        # create a window of len(k) elements
-        window = nums[i:(i + k)]
-        # find window's maximum
-        max_num = max(window)
-        # append to empty list
+    # ***First Pass***
+def sliding_window_max(nums, k):
+    window_array = []
+    expected_output = []
+    while 0 < len(nums) - (k-1):
+        for number in nums[0:k]:
+            window_array.append(number)
+        window_array.sort()
+        max_number = window_array[k-1]
+        expected_output.append(max_number)
+        nums.pop(0)
+        window_array = []
+    return expected_output
 
-        return big_nums
+
 
 if __name__ == '__main__':
     # Use the main function here to test out your implementation 
