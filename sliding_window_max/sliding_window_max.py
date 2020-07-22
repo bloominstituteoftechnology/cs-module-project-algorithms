@@ -2,8 +2,13 @@
 Input: a List of integers as well as an integer `k` representing the size of the sliding window
 Returns: a List of integers
 '''
-def sliding_window_max(nums, k):
-    # Your code here
+def sliding_window_max(arr, k):
+    holding_array = []
+    for i, x in enumerate(arr[:-1*(k-1)]):
+        holding_array.append(max(arr[i:i+k]))
+    return holding_array
+
+
 
     pass
 
