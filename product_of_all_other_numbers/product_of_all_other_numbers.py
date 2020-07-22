@@ -1,11 +1,35 @@
+# Write a function that receives an array of integers and returns an array consisting of the product of all numbers in the array _except_ the number at that index. 
+
+# For example, given 
+# ```
+# [1, 7, 3, 4]
+# ```
+# your function should return 
+# ```
+# [84, 12, 28, 21]
+# ``` 
+# by calculating 
+# ```
+# [7*3*4, 1*3*4, 1*7*4, 1*7*3]
+# ```
 '''
 Input: a List of integers
 Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
-    # Your code here
+    #Function returns an array of the 
+    #products of each element in the array
+    products=[]  #empty array tp push products to
+    n = len(arr)
+    #loop through array
+    for i in range(n):
+        prod = 1
+        for item in range(n):
+            if i != item:
+                prod = prod * arr[item]
+        products.append(int(prod))
 
-    pass
+    return products
 
 
 if __name__ == '__main__':
