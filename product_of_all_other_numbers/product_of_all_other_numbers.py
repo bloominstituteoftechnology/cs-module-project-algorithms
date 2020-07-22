@@ -3,10 +3,17 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
-    # Your code here
+    results = []
 
-    pass
+    for index, number in enumerate(arr):
+        product = 1
+        excluding_current = arr[:index] + arr[index + 1:]
+        for number in excluding_current:
+            product *= number
+        results.append(product)
+    return results
 
+print(product_of_all_other_numbers([1, 7, 3, 4]))
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
