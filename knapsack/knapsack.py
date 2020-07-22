@@ -2,6 +2,7 @@
 
 import sys
 from collections import namedtuple
+from itertools import combinations
 
 Item = namedtuple('Item', ['index', 'size', 'value'])
 
