@@ -5,17 +5,16 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
-    # Create empty product array,
-    # loop through each value
-    # create multiplication array
-        # create new array, absent value
-            # isolate indicies
-            # slice index to remove value
-        # np.prod(new_array)
+    # Converts Python list to NumPy array;
+    # this will allow us to use numpy.prod(np.array)
+    # in our return statement
     arr = np.array(arr)
+    # List for holding the arrays with given value dropped
     list_ = []
     for val in arr:
         index = np.where(arr == val)[0][0]
+        # Unfortunately NumPy arrays have no pop functionality,
+        # so we'll have to use list slicing here.
         if index == 0:
             drop_arr = arr[index + 1:]
         elif index == len(arr):
