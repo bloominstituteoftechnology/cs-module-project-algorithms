@@ -48,7 +48,7 @@ class Test(unittest.TestCase):
     def test_moving_zeroes_return_value_5(self):
         arr = [0, 0, 0, 0, 3, 2, 1] 
         answer = moving_zeroes(arr)
-
+        print(answer)
         self.assertEqual(len(answer), len(arr)) 
 
         for x in answer[:3]:
