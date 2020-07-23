@@ -3,9 +3,14 @@ Input: a List of integers where every int except one shows up twice
 Returns: an integer
 '''
 def single_number(arr):
-    # Your code here
+    result = 0
+    # We'll use the XOR Operator '^' to perform bitwise "exclusive or" on their binary representations.
+    for i in arr:
+        result ^= i
+    return result
 
-    pass
+    # Note. This only works because the repeated numbers appear exactly twice
+        # If if appears more than twice, we can use a Set since a set discards duplicate elements for us.
 
 
 if __name__ == '__main__':
