@@ -3,10 +3,7 @@
 import sys
 
 def rock_paper_scissors(n):
-  # Your code here
-
-  pass
-
+ pass
 
 if __name__ == "__main__":
   if len(sys.argv) > 1:
