@@ -1,4 +1,4 @@
-# Module Project - Algorithms
+# Module Project - Algorithms 
 
 ## Sprint: Algorithms
 
