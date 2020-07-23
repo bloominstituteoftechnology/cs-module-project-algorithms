@@ -23,20 +23,46 @@
 Input: a List of integers
 Returns: a List of integers
 '''
+# def moving_zeroes(arr):
+#     count = 0
+#     n = len(arr)
+
+#     for i in range(n):
+#         if(arr[i] != 0):
+#             arr[count] = arr[i]
+#             count += 1
+#     while count < n:
+#         arr[count] = 0
+#         count += 1
+#     return arr
+
+#initialize a left and right pointer
+#left is 0
+#right is the last index in the arr
+#while left <= right:
+    #if left points at 0 and right is at a non-zero
+        #swap left and right items in original array
+        #increment left
+        #decrement right
+    #else
+        #if left is non-zero:
+            #increment left
+        #if right is zero:
+            #decrement right
+    #return arr
 def moving_zeroes(arr):
-    count = 0
-    n = len(arr)
+   
+    left = 0
+    right = len(arr)-1
 
-    for i in range(n):
-        if(arr[i] != 0):
-            arr[count] = arr[i]
-            count += 1
-    while count < n:
-        arr[count] = 0
-        count += 1
+    while left != right:
+        if arr[left] !=0:
+            left += 1
+        elif arr[right] == 0:
+            right -= 1
+        else:
+            arr[left], arr[right] = arr[right], arr[left]
     return arr
-
-
 
 if __name__ == '__main__':
     # Use the main function here to test out your implementation
