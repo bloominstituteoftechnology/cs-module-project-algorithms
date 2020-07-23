@@ -1,9 +1,7 @@
-'''
+    '''
 Input: a List of integers where every int except one shows up twice
 Returns: an integer
 '''
-
-
 # def single_number(arr):
 #     # get length of arr
 #     n = len(arr)
