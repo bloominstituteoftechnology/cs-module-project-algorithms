@@ -15,6 +15,17 @@ def sliding_window_max(nums, k):
         list of ints consisting of max value of each window
     '''
     # ***First Pass***
+    '''
+    - k is window
+    - make a new array to hold temp numbers in window
+    - make another array to hold expected output
+    - loop (first pass is 1 so ind0, ind1, ind2 & second pass is 2 so ind1, ind2, ind3)
+        - loop over numbers in window
+        - append numbers to window_array
+    - append window set numbers to new array
+    - compare numbers in new array 
+    - return max value and append it to expected output array
+    '''
 def sliding_window_max(nums, k):
     window_array = []
     expected_output = []

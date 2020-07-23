@@ -3,22 +3,33 @@ Input: a List of integers
 Returns: a List of integers
 '''
 # ***First Pass***
+
+    # receives an arr of ints [1, 5, 3, 4, 6]
+    # loop through the loop through again
+        # declare variable for index
+        # check if looped through to the last index
+            # skip last index if there and keep going
+            # otherwise, multiple  all values together and keep going
+        # insert each answer into a new array
+    #return new array
+
+
 def product_of_all_other_numbers(arr):
     current_index = 0
     new_array = []
     length = len(arr)
 
-    while current_index < length:
-        inside_index = 0
-        result = 1
-        while inside_index < length:
-            if inside_index == current_index:
-                inside_index += 1
-            else:
-                result = result * arr[inside_index]
-                inside_index += 1
-        new_array.append(result)
-        current_index += 1
+    while current_index < length: # start "counter" loop
+        inside_index = 0 # counter for inside loop
+        result = 1 # multiply all elements by 1
+        while inside_index < length: # loop over array for each item
+            if inside_index == current_index: # if inside index is same as current index
+                inside_index += 1 # then increment the inside loop by one
+            else: # unless
+                result = result * arr[inside_index] # multiply the items together
+                inside_index += 1 # increment the inside loop by 1
+        new_array.append(result) # append result to new array
+        current_index += 1 # increment index for outer loop
     return new_array
 
 
