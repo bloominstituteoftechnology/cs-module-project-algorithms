@@ -17,7 +17,7 @@ def single_number(arr):
 
     raise ValueError(f'No values in {arr} occurred only once')
 
-    '''
+    ''' Slower due to Python's sort() method
     arr.sort()
     idx = 0
 
