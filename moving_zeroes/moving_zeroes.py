@@ -16,20 +16,37 @@ Returns: a List of integers
             # increment left
         # if right is 0
             # decrement right
-def moving_zeroes(arr):
-    i = 0
-    length = len(arr)
+    # ***First Pass***
+# def moving_zeroes(arr):
+#     i = 0
+#     length = len(arr)
 
-    while i < length:
-        if arr[i] == 0:
-            arr.pop(i)
-            arr.append(0)
-            length -= 1
-        else:
-            i += 1
+#     while i < length:
+#         if arr[i] == 0:
+#             arr.pop(i)
+#             arr.append(0)
+#             length -= 1
+#         else:
+#             i += 1
     
-    return arr
-            
+#     return arr
+    #***Second Pass***
+def moving_zeroes(arr):
+    index = 0
+    new_array = []
+    number = arr[index]
+    end = len(arr)
+    
+    while index < end:
+        number = arr[index]
+
+        if number == 0: # if number at this index is zero move it to end
+            new_array.insert(end, 0) # at the end of new_array insert 0
+        else:
+            new_array.insert(0, number) # insert the number at the start
+        index += 1
+        
+    return new_array
 
 if __name__ == '__main__':
     # Use the main function here to test out your implementation
