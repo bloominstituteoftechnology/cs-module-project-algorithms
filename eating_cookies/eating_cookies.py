@@ -3,10 +3,11 @@ Input: an integer
 Returns: an integer
 '''
 
+cache = {}
 
-def eating_cookies(n):
+
+def eating_cookies(n, cache={}):
     # Your code here
-    cache = {}
 
     if n in cache:
         return cache[n]
