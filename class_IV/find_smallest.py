@@ -16,8 +16,8 @@ def find_smallest_missing(arr):
     smallest missing element in it
     """
     if arr[0] != 0:
-            return 0
-            
+        return 0
+
     for i in range(len(arr) - 1):
         print(arr)
         print(i)
