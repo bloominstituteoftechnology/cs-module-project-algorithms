@@ -11,6 +11,7 @@ Returns: an integer
 #     else:
 #         return eating_cookies(n - 1) + eating_cookies(n - 2) + eating_cookies(n - 3)
 
+# Optimized
 def eating_cookies(n, cache = None):
     # Check for negative values
     if n < 0:
