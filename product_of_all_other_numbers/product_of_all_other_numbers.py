@@ -7,7 +7,7 @@ Returns: a List of integers
 def product_of_all_other_numbers(arr):
     # Converts Python list to NumPy array;
     # this will allow us to use numpy.prod(np.array)
-    # in our return statement
+    # in our return statement.
     arr = np.array(arr)
     # List for holding the arrays with given value dropped
     list_ = []
