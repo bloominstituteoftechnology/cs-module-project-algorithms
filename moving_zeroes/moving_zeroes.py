@@ -21,3 +21,7 @@ if __name__ == '__main__':
     arr = [0, 3, 1, 0, -2]
 
     print(f"The resulting of moving_zeroes is: {moving_zeroes(arr)}")
+
+
+def moving_zeroes_2(arr):
+    pass
