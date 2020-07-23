@@ -28,3 +28,18 @@ You can also test your implementation manually by executing `python eating_cooki
  * Think about base cases that we would want our recursive function to stop recursing on. How many ways are there to eat 0 cookies? What about a negative number of cookies? 
  * Once we've established some base cases, how can we recursively call our function such that we move towards one or more of these base cases?
  * As far as performance optimizations go, caching/memoization might be one avenue we could go down? How should we make a cache available to our recursive function through multiple recursive calls?
+
+ #### Alt
+ ```py
+ def eating_cookies(n):
+    if n == 0:
+        return 1
+    elif n < 0:
+        return 0
+
+    k1 = n - 1
+    k2 = n - 2
+    k3 = n - 3
+
+    return eating_cookies(k1) + eating_cookies(k2) + eating_cookies(k3)
+```
