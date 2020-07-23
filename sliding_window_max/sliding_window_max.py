@@ -26,19 +26,29 @@ Returns:
 - compare numbers in new array 
 - return max value and append it to expected output array
 '''
-def sliding_window_max(nums, k):
-    window_array = []
-    expected_output = []
-    while 0 < len(nums) - (k-1):
-        for number in nums[0:k]:
-            window_array.append(number)
-        window_array.sort()
-        max_number = window_array[k-1]
-        expected_output.append(max_number)
-        nums.pop(0)
-        window_array = []
-    return expected_output
+#***First Pass***
+# def sliding_window_max(nums, k):
+#     window_array = []
+#     expected_output = []
+#     while 0 < len(nums) - (k-1):
+#         for number in nums[0:k]:
+#             window_array.append(number)
+#         window_array.sort()
+#         max_number = window_array[k-1]
+#         expected_output.append(max_number)
+#         nums.pop(0)
+#         window_array = []
+#     return expected_output
 
+#***Optimized Solution***
+def sliding_window_max(nums, k):
+
+    expected_output = []
+    while 0 < len(nums) - (k - 1):
+        window_array = nums[0:k]
+        expected_output.append(max(window_array))
+        nums.pop(0)
+    return expected_output
 
 
 if __name__ == '__main__':
