@@ -22,24 +22,31 @@ def single_number(arr):
         while index < length:
             current_element = arr[index]
             next_element = arr[index + 1]
+
             if current_element == next_element:
                 index = index + 2
+
             else:
                 single_element = current_element
+
                 break # exits the loop if the number is found
 
         return single_element 
 
     else: # odd length array
         last_element = arr[-1] # declare variable to hold the last element in array
+
         while index < length - 1: # loop through until find last element
             current_element = arr[index]
             next_element = arr[index + 1]
+
             if current_element == next_element:
                 index = index + 2
+
             else:
                 single_element = current_element
                 break # exit the loop if number is found
+            
         return single_element or last_element
 
 
