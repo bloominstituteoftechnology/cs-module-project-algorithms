@@ -12,13 +12,15 @@ def sliding_window_max(nums, k):
         end += 1
         #print(start, end)
         win = nums[start:end]
-        print(win)
-        result = 0
-        for x in win:
-            if x >= result:
-                result = x  
-        solution.append(result)
-        print(result)
+        if len(win) is 3:
+            print(win)
+            result = 0
+            for x in win:
+                if x >= result and len(win) is 3:
+                    result = x  
+            solution.append(result)
+            print(result)
+            print(solution)
     return solution
 
 

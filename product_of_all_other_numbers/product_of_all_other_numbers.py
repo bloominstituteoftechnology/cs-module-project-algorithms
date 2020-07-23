@@ -13,8 +13,6 @@ def product_of_all_other_numbers(arr):
         solution.append(result)
     return solution
 
-
-
 if __name__ == '__main__':
     # Use the main function to test your implementation
     arr = [1, 2, 3, 4, 5]
