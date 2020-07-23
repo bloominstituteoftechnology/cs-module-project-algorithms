@@ -4,26 +4,26 @@ Returns: an integer
 '''
 
 
-def eating_cookies(n, cache=None):
+def eating_cookies(numberOfCookies, cache=None):
     # base case
-    if n == 0:
+    if numberOfCookies == 0:
         return 1
-    elif n < 0:
+    elif numberOfCookies < 0:
         return 0
     # check if the work has already been done
     # by looking in the cache
-    elif cache is not None and cache[n] > 0:
+    elif cache is not None and cache[numberOfCookies] > 0:
         # return the previously computed answer and don't recurse
-        return cache[n]
+        return cache[numberOfCookies]
     else:
         # might need to create our cache for the first time
         if cache is None:
             # initialize an empty list for a cache
-            cache = [0 for i in range(n + 1)]
+            cache = [0 for i in range(numberOfCookies + 1)]
             # store the value of the recursive call expression in out cache
-        cache[n] = eating_cookies(n - 1, cache) + eating_cookies(n - 2, cache) + eating_cookies(n - 3, cache)
+        cache[numberOfCookies] = eating_cookies(numberOfCookies - 1, cache) + eating_cookies(numberOfCookies - 2, cache) + eating_cookies(numberOfCookies - 3, cache)
 
-    return cache[n]
+    return cache[numberOfCookies]
 
 """
 In order to show the redundant work going on, add a print(n) statement at the beginning of eating cookies

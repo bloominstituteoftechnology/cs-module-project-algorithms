@@ -4,16 +4,16 @@ Returns: a List of integers
 '''
 
 
-def moving_zeroes(arr):
-    holder = []
+def moving_zeroes(array):
+    holderArray = []
 
-    for num in arr:
-        if num == 0:
-            holder.append(num)
+    for number in array:
+        if number == 0:
+            holderArray.append(number)
         else:
-            holder.insert(0, num)
+            holderArray.insert(0, number)
 
-    return holder
+    return holderArray
 
 
 if __name__ == '__main__':
@@ -40,27 +40,27 @@ if the right sees a zero increment
 
 """
 
-def moving_zeroes(arr):
-    # initialize a left and right pointer
-    # left is 0
-    # right is last index in arr
-
-    # while left <= right:
-        # if left points at a zero and right points at non-zero
-            # swap left and right items in original arr
-
-            # increment left
-            # increment right
-
-        # else
-
-            # if left is non-zero:
-                # increment left
-
-            # if right is zero:
-                # decrement right
-
-    return arr
+# def moving_zeroes(arr):
+#     # initialize a left and right pointer
+#     # left is 0
+#     # right is last index in arr
+#
+#     # while left <= right:
+#         # if left points at a zero and right points at non-zero
+#             # swap left and right items in original arr
+#
+#             # increment left
+#             # increment right
+#
+#         # else
+#
+#             # if left is non-zero:
+#                 # increment left
+#
+#             # if right is zero:
+#                 # decrement right
+#
+#     return arr
 
 """
 What can I do to avoid having nested loops or needing to slice the arrays?
