@@ -15,7 +15,8 @@ def eating_cookies(n):
     k3 = n - 3
 
     # will need to keep track of results for base case
-    # can try memoization (https://www.geeksforgeeks.org/memoization-using-decorators-in-python/)
+    # can try memoization
+    # (https://www.geeksforgeeks.org/memoization-using-decorators-in-python/)
     memory = {}
 
     # base case - n is in memory
@@ -23,30 +24,36 @@ def eating_cookies(n):
         return memory[n]
 
     # otherwise, handle the ex. case first
+
+    # > got `max recursion depth exceeded` error on this structure:
+    # else:
+        # if n == 0:
+        # etc ...
+    # > so changed to:
+
+    # if none
+    elif n == 0:
+        ways = 1  # > test is looking for 1, but how does monster eat 0 cookies?
+    # if one
+    elif n == 1:
+        ways = 1
+    # if two
+    elif n == 2:
+        ways = 2
+    # if three
+    elif n == 3:
+        ways = 4
+    # if more than 3
     else:
-        # if none
-        if n == 0:
-            ways = 0
-        # if one
-        if n == 1:
-            ways = 1
-        # if two
-        if n == 2:
-            ways = 2
-        # if three
-        if n == 3:
-            ways = 4
-        # if more than 3
-        else:
-            # try recursion - call `eating_cookies` on all the ways to eat
-            # each call should return number of options
-            ways = eating_cookies(k1) + eating_cookies(k2) + eating_cookies(k3)
+        # try recursion - call `eating_cookies` on all the ways to eat
+        # each call should return number of options
+        ways = eating_cookies(k1) + eating_cookies(k2) + eating_cookies(k3)
 
     # get closer to base case
     memory[n] = ways
-            
+
     return ways
-    
+
 
 if __name__ == "__main__":
     # # Use the main function here to test out your implementation
@@ -61,5 +68,5 @@ if __name__ == "__main__":
     # k1 = 1
     # k2 = 2
     # k3 = 3
-   
-   print(eating_cookies(3))
+
+    print(eating_cookies(10))  # > 274
