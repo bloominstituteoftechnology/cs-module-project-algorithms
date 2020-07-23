@@ -18,10 +18,12 @@ def single_number(arr):
 
     ### Count the number of times that a given value has appeared
     ## use a dictionary
+
+    '''
     integer_count = {}
 
-    for item in arr:
-        if item in integer_count:
+    for item in arr: #O(n)
+        if item in integer_count: #O(1)
             integer_count[item] += 1
         else: 
             integer_count[item] = 1
@@ -33,6 +35,15 @@ def single_number(arr):
             return item
 
     #print(integer_count)
+
+    '''
+
+    #Nice, very short solutioon
+    
+    for item in arr:
+        if arr.count(item) == 1:
+            return item
+    
     
 
     #pass

@@ -1,3 +1,4 @@
+"""
 '''
 Input: a List of integers
 Returns: a List of integers
@@ -19,6 +20,7 @@ Expected output array state: [4, 2, 1, 5]
 
 
 '''
+'''
 def moving_zeroes(arr):
     # Your code here
 
@@ -34,6 +36,69 @@ def moving_zeroes(arr):
     
 
     #pass
+'''
+
+
+
+
+'''
+Input: a List of integers
+Returns: a List of integers
+
+​
+what if we had a pointer that started at the beginning
+and a pointer that started at the end
+and they moved towards each other in the middle?
+​
+if the left pointer "sees" a zero and the right pointer "sees" a non-zero
+swap
+​
+if the left sees a non-zero increment
+if the right sees a zero increment
+'''
+​"""
+
+
+def moving_zeroes(arr):
+
+    
+    # initialize a left and right pointer
+    left_pointer = 0
+    right_pointer = (len(arr)-1)
+    print(f'OG array {arr}')
+    #print(f'ARR at left {arr[left_pointer]}')
+    #print(f'ARR at right {arr[right_pointer]}')
+
+
+    # left is 0
+    # right is last index in arr
+    # while left <= right:
+    while left_pointer <= right_pointer:
+        # if left points at a zero and right points at non-zero
+        if arr[left_pointer] == 0 and arr[right_pointer] != 0:
+            # swap left and right items in original arr
+            arr[left_pointer], arr[right_pointer] = arr[right_pointer], arr[left_pointer]
+            #print(f'!!!!!ARR at left {arr[left_pointer]}')
+            #print(f'!!!!!!ARR at right {arr[right_pointer]}')
+            
+            # increment left
+        left_pointer += 1
+            # decrement right
+        right_pointer -= 1
+
+        #     # if left is non-zero:
+        if arr[left_pointer] != 0:
+            left_pointer += 1
+            print(f'ARR at left {arr[left_pointer]}')
+            
+        #         # increment left
+        #if right is zero:
+        if arr[right_pointer] == 0:
+        #         # decrement right
+            right_pointer -= 1
+    print(arr)
+    return arr
+
 
 
 if __name__ == '__main__':
