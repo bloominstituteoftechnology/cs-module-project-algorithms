@@ -4,8 +4,19 @@ Returns: a List of integers
 '''
 def moving_zeroes(arr):
     # Your code here
+    for i in range(len(arr)):
+        x = arr[i]
 
-    pass
+        if x != 0:
+            print('[x]:',[x])
+            print('arr[:i]', arr[:i])
+            print('arr[i+1:]', arr[i+1:])
+            # replaces the non-zero value in the front of the array
+            #python does not include last digit, which is i.
+            # moves x (non-0) to the front, swaps position with, digits already in front 
+            arr = [x] + arr[:i] + arr[i+1:]
+            print(arr)
+    return arr
 
 
 if __name__ == '__main__':

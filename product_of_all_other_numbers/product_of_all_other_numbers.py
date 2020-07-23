@@ -3,9 +3,32 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
-    # Your code here
+    if len(arr) == 0:
+        return
+    newArray = [1 for _ in range(0, len(arr))]
+    
+    #use pointer
+    for i in range (0, len(arr)):
+        p1 = 0
+        p2 = len(arr) - 1
+        print(i)
+        while p1 != i:
+            if p1 != i:
+                print('p1', p1)
+                newArray[i] *= arr[p1]
+                print('p1 newArray', newArray[i])
+                p1 += 1
+        while p2 != i:
+            if p2 != i:
+                print('p2', p2)
+                newArray[i] *= arr[p2]
+                print('newArray',newArray[i])
+                p2 -= 1
+    return(newArray)
 
-    pass
+print(product_of_all_other_numbers([2,3,4,5,4]))
+
+    
 
 
 if __name__ == '__main__':
