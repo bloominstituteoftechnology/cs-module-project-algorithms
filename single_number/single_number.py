@@ -6,7 +6,7 @@ Returns: an integer
 
 def single_number(arr):
 
-    a = [i for i in arr if arr.count(i) == 1]
+    a = set(i for i in arr if arr.count(i) == 1)
     return a.pop()
 
 
