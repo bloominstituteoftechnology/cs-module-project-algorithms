@@ -49,3 +49,39 @@ if __name__ == '__main__':
     arr = [1, 1, 4, 4, 5, 5, 3, 3, 9, 0, 0]
 
     print(f"The odd-number-out is {single_number2(arr)}")
+
+def solution(A):
+    # write your code in Python 3.6
+    maxValue = max(A)
+    #maxValue + 1, because starts with 0
+    elements = [0 for _ in range(0, maxValue + 1)]
+    
+    print(elements)
+    for i in A:
+        elements[i] += 1
+    print(elements)
+    for i in range(len(elements)):
+        if elements[i] == 1:
+            odd = i
+    return odd
+print(solution(arr))
+
+def return_odd(A):
+    # write your code in Python 3.6
+    counts = {}
+
+    #loop through nums to tally up how many times we've seen each number
+    for x in A:
+        if x in counts:
+            counts[x] += 1
+        else:
+            counts[x] = 1
+    #loop through all key-value pairs in counts to find the one pir
+    #whose value is 1
+    for num in counts:
+        if counts[num]%2 != 0:
+            return num
+
+A = [1,3,1,3,0, 0 ,0]
+print(return_odd(A))
+

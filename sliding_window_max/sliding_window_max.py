@@ -1,11 +1,23 @@
 '''
-Input: a List of integers as well as an integer `k` representing the size of the sliding window
+Input: a List of integers as well as an integer `k` representing the size of the 
+sliding window
 Returns: a List of integers
 '''
 def sliding_window_max(nums, k):
     # Your code here
+    maxValue = sum(nums[:k])
+    p1 = 0
+    p2  = k
+    arr = []
+    while p2 <= (len(nums)):
+        print(nums[p1:p2])
+        current_max = max(nums[p1:p2])
+        arr.append(current_max)
+        p1 += 1
+        p2 += 1
+    return arr
 
-    pass
+    
 
 
 if __name__ == '__main__':

@@ -12,6 +12,8 @@ def moving_zeroes(arr):
             print('arr[:i]', arr[:i])
             print('arr[i+1:]', arr[i+1:])
             # replaces the non-zero value in the front of the array
+            #python does not include last digit, which is i.
+            # moves x (non-0) to the front, swaps position with, digits already in front 
             arr = [x] + arr[:i] + arr[i+1:]
             print(arr)
     return arr

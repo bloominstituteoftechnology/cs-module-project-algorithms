@@ -7,7 +7,7 @@ def factorial(n):
     # we know that n factorial is n * n-1 factorial
     return n * factorial(n-1)
 
-print(factorial(5))
+#print(factorial(5))
 
 #recursion starts calculating at base case
 #another example
@@ -31,7 +31,7 @@ def inter_fact(n):
         value *= i
     return value
 
-print(inter_fact(5))
+#print(inter_fact(5))
 
 # fibonacci
 # takes its value and adds it to the value
@@ -41,6 +41,7 @@ cache = {}
 
 def fib(n):
     # if n in fib cache, return n
+    print('cache', cache)
     if n in cache:
         return cache[n]
     #base case 
@@ -55,9 +56,9 @@ def fib(n):
 
     #cache value and return it
     cache[n] = value
-    return value 
+    return n + fib(n-1) 
     
-
+#print(fib(5))
  
 
 for n in range(1, 101):
