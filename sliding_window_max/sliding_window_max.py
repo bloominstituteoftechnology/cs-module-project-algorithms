@@ -11,12 +11,27 @@ def sliding_window_max(nums, k):
     #     a.append(max(window))
     # return a
 
-    expected_output = []
-    while 0 < len(nums) - (k-1):
-        window_array = nums[0:k]
-        expected_output.append(max(window_array))
-        nums.pop(0)
-    return expected_output
+    # expected_output = []
+    # while 0 < len(nums) - (k-1):
+    #     window_array = nums[0:k]
+    #     expected_output.append(max(window_array))
+    #     nums.pop(0)
+    # return expected_output
+
+    result = []
+    start = 0
+    end = k
+
+    while end <= len(nums):
+        max_num = nums[start]
+        for i in range(start + 1, end):
+            if nums[i] > max_num:
+                max_num = nums[i]
+        result.append(max_num)
+        start += 1
+        end += 1
+
+    return result
 
 
 
