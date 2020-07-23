@@ -1,18 +1,39 @@
+# ### FIRST_PASS:
+# def single_number(arr):
+#     '''
+#     Input: a List of integers where every int except one shows up twice
+#     Returns: an integer
+#     '''
+#     # Your code here
+
+#     # create a counter
+#     count = 0
+
+#     # loop through array and update counter
+#     for i in arr:
+#         # compare count of item
+#         if arr.count(i) == 1:
+#             return i
+
+### OPTIMIZED:
 def single_number(arr):
     '''
     Input: a List of integers where every int except one shows up twice
     Returns: an integer
     '''
-    # Your code here
+    # use a set to hold memory
+    memory = set()
 
-    # create a counter
-    count = 0
-
-    # loop through array and update counter
+    # loop through array
     for i in arr:
-        # compare count of item
-        if arr.count(i) == 1:
-            return i
+        # if elem in set
+        if i in memory:
+            memory.remove(i)
+        else:
+            memory.add(i)
+
+    # set should only have 1 elem
+    return list(memory)[0]
 
 
 if __name__ == '__main__':
