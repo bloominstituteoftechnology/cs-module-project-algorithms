@@ -1,6 +1,7 @@
 import unittest
 from sliding_window_max import sliding_window_max
 
+
 class Test(unittest.TestCase):
     def test_sliding_window_max_1(self):
         arr = [1, 3, -1, -3, 5, 3, 6, 7]
@@ -25,6 +26,7 @@ class Test(unittest.TestCase):
         expected = [100, 100, 100, 66, 75, 75, 92, 92, 92, 92, 92, 69, 69, 72, 72, 72, 72, 72, 68, 68, 54, 51, 36, 36, 27, 33, 83, 97, 97, 97, 97, 97, 85, 85, 100, 100, 100, 100, 100, 83, 83, 83, 64, 99, 99, 99, 99, 99, 95, 95, 95, 95, 75, 75, 75, 67, 62, 88, 88, 88, 88, 88, 79, 79, 79, 79, 74, 74, 74, 74, 74, 60, 62, 84, 84, 84, 90, 90, 99, 99, 99, 99, 99, 75, 71, 71, 71, 72, 72, 89, 90, 90, 90, 90, 90, 86]
 
         self.assertEqual(output, expected)
+
 
 if __name__ == '__main__':
     unittest.main()
