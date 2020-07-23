@@ -1,4 +1,4 @@
-    '''
+'''
 Input: a List of integers where every int except one shows up twice
 Returns: an integer
 '''
@@ -35,7 +35,7 @@ def single_number(arr):
             cache[x] = 1
     # there should be only 1 item left in the dictionary.  Return it.
     for k,v in cache.items():
-       return k
+        return k
 
 
 if __name__ == '__main__':
