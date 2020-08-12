@@ -2,10 +2,24 @@
 Input: a List of integers
 Returns: a List of integers
 '''
+
+
 def moving_zeroes(arr):
     # Your code here
+    # Understand:
+    # Given a list with integers, move all of the zeros to the right side
+    # of the list. The order of the other integers on the left side doesn't
+    # matter.
 
-    pass
+    # Plan:
+    # Count the zeros
+    # Use a list comprehension to remove the zeros
+    # append the zeros back
+
+    # Execute:
+    arr = [val for val in arr if val != 0] + [z for z in arr if z == 0]
+
+    return arr
 
 
 if __name__ == '__main__':
