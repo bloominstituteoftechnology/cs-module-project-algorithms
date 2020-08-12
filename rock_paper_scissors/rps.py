@@ -4,6 +4,7 @@ import sys
 
 def rock_paper_scissors(n):
   # Your code here
+  
 
   pass
 

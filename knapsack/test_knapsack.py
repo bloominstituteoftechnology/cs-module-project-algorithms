@@ -5,6 +5,7 @@ from knapsack import knapsack_solver
 
 Item = namedtuple('Item', ['index', 'size', 'value'])
 
+ 
 class Test(unittest.TestCase):
   def setUp_small(self):
     file_contents = open('data/small1.txt', 'r')
@@ -107,3 +108,5 @@ class Test(unittest.TestCase):
 
 if __name__ == '__main__':
   unittest.main()
+  
+ 
