@@ -1,11 +1,24 @@
 '''
 Input: a List of integers
 Returns: a List of integers
+Write a function that receives an array of integers and returns an array 
+consisting of the product of all numbers in the array _except_ the number at that index. 
 '''
 def product_of_all_other_numbers(arr):
-    # Your code here
+    new_array = [0] * len(arr)
 
-    pass
+    # 
+    for i in range(0, len(arr)):
+        copy = arr[:]
+        copy[i] = 1
+        total = 1
+
+        for num in copy:
+            total *= num
+
+        new_array[i] = total
+    
+    return new_array
 
 
 if __name__ == '__main__':
