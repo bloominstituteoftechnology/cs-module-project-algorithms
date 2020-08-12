@@ -4,12 +4,34 @@ import sys
 from collections import namedtuple
 
 Item = namedtuple('Item', ['index', 'size', 'value'])
-# stuff = [
-#    Item('Thing1', [0,12,20] )
-# ]
-# print("ITEM", stuff)
+ 
+thing1 = Item(index=0,size=11,value =22)
+thing2 = Item(index=1,size=4,value=33)
+thing3 = Item(index=2,size=5, value=40)
+thing4 = Item(3,4,55)
+print("ITEM",thing4[2])
+stuff = []  
+
+newStuff = []
+stuff.append(thing1 )
+stuff.append(thing2)
+stuff.append(thing3)
+stuff.append(thing4)
+
+
+def divide_item(item):
+      # res= int (item.value//item.size)
+      return item.value//item.size
+    
+Eff = divide_item( thing1)   
+
+print("EFF",Eff) 
+for i in stuff:
+  res =divide_item(i)
+  newStuff.append(res)
+  print("STUFF", stuff)
+  print("NEWSTUFF", newStuff)
    
-# print(stuff)
 def knapsack_solver(items, capacity):
     # Your code here
     items.sort(key = lambda x: x.value, reverse =True)
