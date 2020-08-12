@@ -3,9 +3,24 @@
 import sys
 
 def rock_paper_scissors(n):
-  # Your code here
+  return combinations(n, [])
 
-  pass
+def combinations(n, currentList):
+    choices = ["rock", "paper", "scissors"]
+
+    if len(currentList) == 0:
+        return combinations(n - 1, [[c] for c in choices])
+    if n == 0:
+        return currentList
+    
+    newList = []
+    for combo in currentList:
+        for choice in choices:
+            newCombo = combo.copy()
+            newCombo.append(choice)
+            newList.append(newCombo)
+    
+    return combinations(n - 1, newList)
 
 
 if __name__ == "__main__":
