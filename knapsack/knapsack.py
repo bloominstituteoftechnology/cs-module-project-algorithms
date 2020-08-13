@@ -89,4 +89,44 @@ def naive_knapsack(weight_limit, items):
     return sack    
     #put the next most valuable item in it
     
+import itertools    
+def knapsack_brute_force(weight_limit, items):
+     all_combos =[]
+     for i in range (1,len(items)+1):
+       list_of_combos = list(combinations(items, i))
+       for combo in list_of_combos:
+         all_combos.append(combo)
+     max_value = -1
+     best_combo = None
+     for combo in all_combos:
+       value= 0
+       weight = 0
+       for item in combo:
+         value += item.value
+         weight += item.weight
+       if weight <= weight_limit:
+         if value < max_value:
+           max_value = value
+           best_combo = combo  
+           
+                
+       return best_combo         
+ #PROS = faster than brute force, much smarter than naive
+ #CONS - may not get optimal result.
      
+def knapsack_greedy(weight_limit, items):
+  for i in items:
+    i.efficiency = i.value/ i.weight
+    
+    items.sort(keys= lambda x: x.efficiency, reverse=True)    
+    
+    sack= [] 
+    weight= 0
+    for i in items:
+      weight += i.weight
+      if weight > weight_limit:
+        return sack
+      else:
+        sack.append(i)
+        
+    return sack    
