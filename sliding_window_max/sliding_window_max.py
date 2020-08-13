@@ -3,9 +3,40 @@ Input: a List of integers as well as an integer `k` representing the size of the
 Returns: a List of integers
 '''
 def sliding_window_max(nums, k):
-    # Your code here
+  q = deque()
+  q.append(0)
+  for i in range(1, k):
+    if nums[i] >= nums[q[0]]:
+      q.clear()
+      q.append(i)
+    else:
+      j = len(q) - 1
+      while j > 0:
+        if nums[i] >= nums[q[j]]:
+          q.pop()
+        j -= 1
+      q.append(i)
 
-    pass
+  max_val = nums[q[0]]
+  max_nums = [max_val]
+  for i in range(k, len(nums)):
+    if i > q[0] + k - 1:
+      q.popleft()
+      max_val = nums[q[0]] if q else float("-inf")
+    if nums[i] >= max_val:
+      q.clear()
+      q.append(i)
+      max_val = nums[i]
+    else:
+      j = len(q)- 1
+      while j > 0:
+        if nums[i] > nums[q[j]]:
+          q.pop()
+        j -= 1
+      q.append(i)
+    max_nums.append(nums[q[0]])
+  # print('ans: ',max_nums)
+  return max_nums
 
 
 if __name__ == '__main__':
