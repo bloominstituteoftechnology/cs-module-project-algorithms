@@ -3,15 +3,20 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def moving_zeroes(arr):
-    zeros = []
-    i = 0
-    while i < len(arr):
-        if arr[i] == 0:
-            zeros.append(arr.pop(i))
-        else:
-            i += 1
-    
-    arr.extend(zeros)
+    end = len(arr) - 1
+    for i in range(len(arr)):
+        if i >= end:
+            return arr
+        
+        if arr[i] is 0:
+            while (arr[end] is 0) and (end > i):
+                end -= 1
+            
+            if i == end:
+                return arr
+            else:
+                arr[i], arr[end] = arr[end], arr[i]
+                end -= 1
     return arr
 
 
