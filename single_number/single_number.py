@@ -4,8 +4,15 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
-
-    pass
+    n_table = {}
+    for n in arr:
+        if n not in n_table:
+            n_table[n] = 1
+        else:
+            n_table[n] += 1
+    for n in n_table:
+        if n_table[n] == 1:
+            return n
 
 
 if __name__ == '__main__':

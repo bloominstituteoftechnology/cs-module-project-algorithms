@@ -9,7 +9,7 @@ Expected output: 1
 ```
 
 ```
-Sample iput: [4, 1, 2, 1, 2]
+Sample input: [4, 1, 2, 1, 2]
 Expected output: 4
 ```
 

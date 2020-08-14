@@ -6,13 +6,15 @@ class Test(unittest.TestCase):
     def test_single_number(self):
         arr = []
 
-        for i in range(1000):
+        for i in range(20):
             arr.append(i)
             arr.append(i)
 
         random.shuffle(arr)
         rand_index = random.randint(0, len(arr))
         num = arr.pop(rand_index)
+
+        # print(arr)
 
         self.assertEqual(single_number(arr), num)
 
