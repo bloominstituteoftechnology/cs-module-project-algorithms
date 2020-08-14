@@ -3,17 +3,14 @@
 import sys
 
 def making_change(amount, denominations):
-    if amount < 0:
-        return 0
-    if amount == 0:
-        return 1
+    table = [0 for _ in range(amount + 1)]
+    table[0] = 1
+
+    for i in range(0, len(denominations)):
+        for j in range(denominations[i], amount + 1):
+            table[j] += table[j - denominations[i]]
     
-    num_ways_to_make_change = 0
-
-    for i in range(len(denominations)):
-        num_ways_to_make_change += making_change(amount - denominations[i], denominations[i:])
-
-    return num_ways_to_make_change
+    return table[amount]
 
 
 # denominations = [1, 5, 10, 25, 50]
