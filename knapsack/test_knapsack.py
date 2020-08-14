@@ -5,9 +5,10 @@ from knapsack import knapsack_solver
 
 Item = namedtuple('Item', ['index', 'size', 'value'])
 
+ 
 class Test(unittest.TestCase):
   def setUp_small(self):
-    file_contents = open('data/small1.txt', 'r')
+    file_contents = open('C:/Users/bluem/python/cs-module-project-algorithms/knapsack/data/small1.txt', 'r')
     self.small_1_items = []
     
     for line in file_contents.readlines():
@@ -16,7 +17,7 @@ class Test(unittest.TestCase):
 
     file_contents.close()
 
-    file_contents = open('data/small2.txt', 'r')
+    file_contents = open('C:/Users/bluem/python/cs-module-project-algorithms/knapsack/data/small2.txt', 'r')
     self.small_2_items = []
     
     for line in file_contents.readlines():
@@ -25,7 +26,7 @@ class Test(unittest.TestCase):
 
     file_contents.close()
 
-    file_contents = open('data/small3.txt', 'r')
+    file_contents = open('C:/Users/bluem/python/cs-module-project-algorithms/knapsack/data/small3.txt', 'r')
     self.small_3_items = []
     
     for line in file_contents.readlines():
@@ -40,7 +41,7 @@ class Test(unittest.TestCase):
     del self.small_3_items
 
   def setUp_medium(self):
-    file_contents = open('data/medium1.txt', 'r')
+    file_contents = open('C:/Users/bluem/python/cs-module-project-algorithms/knapsack/data/medium1.txt', 'r')
     self.medium_1_items = []
     
     for line in file_contents.readlines():
@@ -107,3 +108,5 @@ class Test(unittest.TestCase):
 
 if __name__ == '__main__':
   unittest.main()
+  
+ 
