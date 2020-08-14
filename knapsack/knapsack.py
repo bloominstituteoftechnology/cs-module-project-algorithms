@@ -7,9 +7,8 @@ Item = namedtuple('Item', ['index', 'size', 'value'])
  
 thing1 = Item(index=0,size=11,value =22)
 thing2 = Item(index=1,size=4,value=33)
-thing3 = Item(index=2,size=5, value=40)
-thing4 = Item(3,4,55)
-print("ITEM",thing4[2])
+thing3 = Item(index=2,size=5, value=40) 
+thing4 = Item(3,4,55 )
 stuff = []  
 
 newStuff = []
@@ -19,36 +18,35 @@ stuff.append(thing3)
 stuff.append(thing4)
 
 
-def divide_item(item):
+def divide_item(arr):
       # res= int (item.value//item.size)
-      return item.value//item.size
-    
-Eff = divide_item( thing1)   
+      newArr = []
+      for item in arr:
+          eff=  item.value//item.size
+          newArr.append(item.index)
 
-print("EFF",Eff) 
-for i in stuff:
-  res =divide_item(i)
-  newStuff.append(res)
-  print("STUFF", stuff)
-  print("NEWSTUFF", newStuff)
+          newArr.append(eff)
+             
+      return newArr
+    
+print("GWAA",divide_item(stuff)) 
    
 def knapsack_solver(items, capacity):
-    # Your code here
-    items.sort(key = lambda x: x.value, reverse =True)
-
-    sack = []
-    best =[]
-    cur_weight = 0
-    i = 0
-    for i in (len(items)):
-      return i.value//i.weight
-      # cur_weight+ items[i].weight
-      # if cur_weight + items[i].weight<=capacity:
-      #   sack.append(items[i])
-      ##Sort by value
-       
+    for i in items:
+      # i.efficiency  = i.value/ i.size
+      items.sort(key= lambda x: x.size , reverse=True)    
+      sack= [] 
+      weight= 0
+      for i in items:
+        weight += i.size
+        if weight > capacity:
+          return sack
+        else:
+          sack.append(i)
+        
+    return sack    
             
-      
+print(knapsack_solver(stuff, 25)     )
  
 
 if __name__ == '__main__':
@@ -89,7 +87,7 @@ def naive_knapsack(weight_limit, items):
     return sack    
     #put the next most valuable item in it
     
-import itertools    
+from itertools import combinations  
 def knapsack_brute_force(weight_limit, items):
      all_combos =[]
      for i in range (1,len(items)+1):
