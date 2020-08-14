@@ -6,9 +6,9 @@ def making_change(amount, denominations):
     table = [0 for _ in range(amount + 1)]
     table[0] = 1
 
-    for i in range(0, len(denominations)):
-        for j in range(denominations[i], amount + 1):
-            table[j] += table[j - denominations[i]]
+    for denomination in denominations:
+        for n in range(denomination, amount + 1):
+            table[n] += table[n - denomination]
     
     return table[amount]
 
