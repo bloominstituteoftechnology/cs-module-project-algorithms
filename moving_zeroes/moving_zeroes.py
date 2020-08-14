@@ -8,6 +8,11 @@ def moving_zeroes(arr):
     # or move zeros to the right and ignore non zero numbers
     # if not zero, swap with last zero
     zero_idx_array = []
+
+    for i in range(len(arr) - 1):
+        if arr[i] == 0:
+            arr[i], arr[i+1] = arr[i+1], arr[i]
+    return arr
     """
     for i in range(len(arr)):
         if arr[i] == 0:
@@ -15,8 +20,8 @@ def moving_zeroes(arr):
         if arr[i] != 0:
             arr.insert(z, arr[i])
             arr.pop(arr[i+1])
-    """
-
+    
+    # new implementation
     for i in range(len(arr)):
         if arr[i] == 0:
             zero_idx_array.append(i)
@@ -24,7 +29,7 @@ def moving_zeroes(arr):
     for z in zero_idx_array:
         arr.append(0)
         del arr[]
-    """
+    # new implementation
     i = 0
     while i < len(arr) - 1:
         if arr[i] == 0:
