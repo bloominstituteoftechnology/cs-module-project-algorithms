@@ -9,9 +9,7 @@ def combinations(n, currentList):
     choices = ["rock", "paper", "scissors"]
 
     if len(currentList) == 0:
-        if n < 1: 
-            return [[]]
-        return combinations(n - 1, [[c] for c in choices])
+        return [[]] if n < 1 else combinations(n - 1, [[c] for c in choices])
     if n < 1:
         return currentList
     
