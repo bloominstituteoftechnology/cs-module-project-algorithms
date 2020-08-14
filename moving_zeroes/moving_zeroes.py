@@ -7,37 +7,14 @@ def moving_zeroes(arr):
     # or hold index of zero in a variable so that the number is moved to (index of zero) - 1
     # or move zeros to the right and ignore non zero numbers
     # if not zero, swap with last zero
-    zero_idx_array = []
-    """
-    for i, e in enumerate(arr):
-        if i == e == 0:
-            arr[i], arr[i+1] = arr[i+1], arr[i]
-            print(arr)
-    return arr
-    """
+
     count_zero = arr.count(0)
     while 0 in arr:
         arr.remove(0)
-
     for n in range(count_zero):
         arr.append(0)
     return arr
-    """
-    count = 0
-    for i, z in enumerate(arr):
-        if z == 0:
-            arr.pop(i)
-            count += 1
-    for z in range(count):
-        arr.append(0)
-    return arr
 
-    for i in range(len(arr)):
-        if arr[i] == 0:
-            zero_idx_array.append(i)
-    for z in zero_idx_array:
-        for n in range(len(arr))
-    """
 if __name__ == '__main__':
     # Use the main function here to test out your implementation
     #arr = [0, 3, 1, 0, -2]
