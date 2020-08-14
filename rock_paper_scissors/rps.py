@@ -9,8 +9,10 @@ def combinations(n, currentList):
     choices = ["rock", "paper", "scissors"]
 
     if len(currentList) == 0:
+        if n < 1: 
+            return [[]]
         return combinations(n - 1, [[c] for c in choices])
-    if n == 0:
+    if n < 1:
         return currentList
     
     newList = []
@@ -22,10 +24,10 @@ def combinations(n, currentList):
     
     return combinations(n - 1, newList)
 
-
-if __name__ == "__main__":
-  if len(sys.argv) > 1:
-    num_plays = int(sys.argv[1])
-    print(rock_paper_scissors(num_plays))
-  else:
-    print('Usage: rps.py [num_plays]')
+# print(rock_paper_scissors(3))
+# if __name__ == "__main__":
+#   if len(sys.argv) > 1:
+#     num_plays = int(sys.argv[1])
+#     print(rock_paper_scissors(num_plays))
+#   else:
+#     print('Usage: rps.py [num_plays]')
