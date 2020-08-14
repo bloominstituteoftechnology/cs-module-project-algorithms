@@ -15,6 +15,12 @@ def moving_zeroes(arr):
         arr.append(0)
     return arr
 
+    for i in range(len(arr)):
+        if arr[i] == 0:
+            zero_idx_array.append(i)
+    for z in zero_idx_array:
+        for n in range(len(arr))
+    """
 if __name__ == '__main__':
     # Use the main function here to test out your implementation
     #arr = [0, 3, 1, 0, -2]
