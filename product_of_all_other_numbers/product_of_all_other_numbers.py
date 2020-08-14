@@ -7,7 +7,7 @@ def product_of_all_other_numbers(arr):
     # Your code here
 
     final_arr = [0] * len(arr)
-    for i, elem in enumerate(arr):
+    for i in range(len(arr)):
 
         j = i + 1
 
