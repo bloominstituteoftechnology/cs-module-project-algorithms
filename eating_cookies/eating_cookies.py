@@ -5,23 +5,34 @@ Returns: an integer
 
 # first-pass solutions
 
+def eating_cookies_three(n):
+  total = 0
+  if n == 0:
+    return 1
+  elif n < 0:
+    return 0
+  else:
+    total += eating_cookies_three(n-1) + eating_cookies_three(n-2) + eating_cookies_three(n-3)
+  return total
+
+print(eating_cookies_three(5))
+
 def debug_eating_cookies(n, arr, j):
     # Your code here
     total = 0
     if n == 0:
         print(arr)
         return 1
-    ways = range(1, n+1)
-    for i in ways:
+    for i in range(1, n+1):
         arr[j] = i
         total += debug_eating_cookies(n - i,arr, j + 1)
         arr[j] = 0
     return total
 
-k = 5
+k = 3
 
 arr = [0] * k 
-print(debug_eating_cookies(k, arr, 0))
+# print(debug_eating_cookies(k, arr, 0))
 
 # def eating_cookies(n):
 #     total = 0

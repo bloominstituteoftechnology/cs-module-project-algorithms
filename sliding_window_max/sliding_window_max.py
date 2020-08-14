@@ -1,19 +1,46 @@
+from collections import deque
+
 '''
 Input: a List of integers as well as an integer `k` representing the size of the sliding window
 Returns: a List of integers
 '''
+# def sliding_window_max(nums, k):
+#     return [max(nums[i:k+i]) for i in range(0, len(nums) - k + 1)]
+
 def sliding_window_max(nums, k):
-    # Your code here
-    # return [max(nums[i:k+i]) for i in range(0, len(nums) - k + 1)]
-    curr_max = max(nums[0:k])
-    max_arr = [curr_max]
-    for i in range(1, len(nums) - k):
-        print(nums[i:i+k])
-        curr_max = max(curr_max, nums[i-1], nums[i+k])
-        max_arr.append(curr_max)
-    curr_max = max(curr_max, nums[i-1], nums[i+k])
-    max_arr.append(curr_max)
-    return max_arr
+    q = deque()
+    q.append(0)
+    for i in range(1, k):
+        if nums[i] >= nums[q[0]]:
+            q.clear()
+            q.append(i)
+        else:
+            j = len(q) - 1
+            while j > 0:
+                if nums[i] >= nums[q[j]]:
+                    q.pop()
+                j -= 1
+            q.append(i)
+
+    max_val = nums[q[0]]
+    max_nums = [max_val]
+    for i in range(k, len(nums)):
+        if i > q[0] + k - 1:
+            q.popleft()
+            max_val = nums[q[0]] if q else float("-inf")
+        if nums[i] >= max_val:
+            q.clear()
+            q.append(i)
+            max_val = nums[i]
+        else:
+            j = len(q)- 1
+            while j > 0:
+                if nums[i] > nums[q[j]]:
+                    q.pop()
+                j -= 1
+            q.append(i)
+        max_nums.append(nums[q[0]])
+    return max_nums
 
 
 if __name__ == '__main__':
