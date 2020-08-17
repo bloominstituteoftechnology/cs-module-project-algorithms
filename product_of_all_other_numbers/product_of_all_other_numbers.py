@@ -4,9 +4,11 @@ Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
     # Your code here
-
-    pass
-
+    # calculate the product of all numbers
+    total_product = product_of_all_numbers(arr)
+    # use list comprehension to divide total product with each item
+    new_arr = [total_product/item for item in arr]
+    return new_arr
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
