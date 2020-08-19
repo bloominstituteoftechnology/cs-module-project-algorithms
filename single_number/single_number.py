@@ -4,8 +4,18 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
+    i = 0
+    neighbor_index = 1
 
-    pass
+    while len(arr) > 1:
+        if neighbor_index == len(arr):
+            return arr[i]
+        if arr[i] == arr[neighbor_index]:
+            arr.pop(neighbor_index)
+            arr.pop(i)
+            neighbor_index = 1
+        else:
+            neighbor_index += 1
 
 
 if __name__ == '__main__':
