@@ -5,7 +5,24 @@ Returns: a List of integers
 def product_of_all_other_numbers(arr):
     # Your code here
 
-    pass
+    index = 0
+    # make a copy of the arr passed in
+    copy_arr = [arr[i] for i in range(0, len(arr))]
+    while index < len(arr):
+        product = 1
+        # loop through the copy array
+        for i in range(0, len(copy_arr)):
+            # skip over the index that is in line with the copied array
+            if index == i:
+                continue
+            # multiply it
+            product *= copy_arr[i]
+        # set that index in the array to the product of all other indicies
+        arr[index] = product
+        index += 1
+
+    return arr
+
 
 
 if __name__ == '__main__':
