@@ -3,10 +3,23 @@ Input: a List of integers as well as an integer `k` representing the size of the
 Returns: a List of integers
 '''
 def sliding_window_max(nums, k):
-    # Your code here
+    # Look for the maximum value within k throughout the nums arr and store those values in a result list
+    # If len(k) - 1 > len(nums) - 1 return because the sliding window is no longer fitting within the list
+    # Start at index 0 and create a subarray of len k (slice nums to be nums[index:k])
+    # After each pass increment index by 1
+    # Use recursion to go through the full nums list
+    result = []
+    index = 0
+    end_index = k
 
-    pass
+    while index <= len(nums) - k:
+        temp_nums = nums[index:end_index]
+        max_value = max(temp_nums)
+        result.append(max_value)
+        index += 1
+        end_index += 1
 
+    return result
 
 if __name__ == '__main__':
     # Use the main function here to test out your implementation 
