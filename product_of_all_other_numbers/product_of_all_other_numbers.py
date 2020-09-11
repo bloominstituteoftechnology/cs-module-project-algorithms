@@ -3,9 +3,21 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
-    # Your code here
-
-    pass
+    # loop thru and exclude indexed number from calculation
+    products = []
+    all_other_numbers = []
+    for i in range(len(arr)):
+        product = 1
+        n = arr.pop(i)
+        print(arr)
+        for x in arr:
+            product *= x
+        print(product)
+        products.append(product)
+    # product = product_of_all_other_numbers(all_other_numbers)
+        arr.insert(i, n)
+        print(arr)
+    return products
 
 
 if __name__ == '__main__':
