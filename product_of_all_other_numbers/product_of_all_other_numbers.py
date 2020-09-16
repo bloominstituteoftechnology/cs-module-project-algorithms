@@ -37,6 +37,7 @@ def product_of_all_other_numbers(arr):
                 prod = (prod*num)
             counter += 1
             res.append(prod)
+            #
 
 
     return res
