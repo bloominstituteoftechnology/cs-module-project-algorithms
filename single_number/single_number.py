@@ -4,8 +4,11 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
+    for i in arr:
+        if arr.count(i) == 1:
+            once = i
+    return once
 
-    pass
 
 
 if __name__ == '__main__':
