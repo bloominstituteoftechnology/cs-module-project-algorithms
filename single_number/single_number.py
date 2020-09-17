@@ -23,3 +23,4 @@ if __name__ == '__main__':
 
     print(f"The odd-number-out is {single_number(arr)}")
 
+#

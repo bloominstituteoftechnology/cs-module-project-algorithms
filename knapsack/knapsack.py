@@ -7,7 +7,7 @@ Item = namedtuple('Item', ['index', 'size', 'value'])
 
 def knapsack_solver(items, capacity):
     # Your code here
-
+    if items == 0 or capacity == 0 
     pass
 
 

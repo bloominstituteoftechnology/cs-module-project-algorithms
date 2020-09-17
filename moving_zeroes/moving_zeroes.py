@@ -12,7 +12,7 @@ def moving_zeroes(arr):
         # numbers not equal to zero append to non_zero
         if num != 0:
             non_zero.append(num)
-        # everthing else aka 0, append to the 0 list    
+        # all the zeros, append to the 0 list    
         else:
             zero.append(num)
 
