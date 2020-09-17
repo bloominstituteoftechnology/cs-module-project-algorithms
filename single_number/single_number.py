@@ -9,6 +9,7 @@ def single_number(arr):
     #return it 
 
     #Better solution:
+    
     #XOR of a number with itself is 0
     #XOR of a number with 0 is number itself
     #XOR operator is ^
