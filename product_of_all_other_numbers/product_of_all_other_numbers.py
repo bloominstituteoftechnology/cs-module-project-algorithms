@@ -2,10 +2,31 @@
 Input: a List of integers
 Returns: a List of integers
 '''
-def product_of_all_other_numbers(arr):
-    # Your code here
 
-    pass
+
+        
+        # iterate through given list:
+        # slice it around the curr position ( arr[:i] + arr[i+1:] )
+        # call math.prod
+        # assign it to result list[i]
+        # return result 
+
+from math import prod
+
+
+def product_of_all_other_numbers(arr):
+    # Solution one:
+    # # Make a new list for returning the result
+    result = [0] * len(arr)
+    
+    for i in range(0, len(arr)):
+    # the current position is equal to the prod(multiply) of all the indexes after it + all indexes before + 1
+        result[i] = prod(arr[i + 1 :] + arr[:i])
+
+    return result
+#-------------------------------------------------
+
+
 
 
 if __name__ == '__main__':
