@@ -4,8 +4,14 @@ Returns: a List of integers
 '''
 def sliding_window_max(nums, k):
     # Your code here
+    max_size = []
+    index = 0
+    while index + k <= len(nums):
+        # find the max in the sliced array by 'k'
+        max_size.append(max(nums[index:(k + index)]))
+        index += 1
 
-    pass
+    return max_size
 
 
 if __name__ == '__main__':
