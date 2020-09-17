@@ -5,7 +5,12 @@ import sys
 def rock_paper_scissors(n):
   # Your code here
 
-  pass
+  output = []
+  mapping = {0:'rock',1:'paper',2:'scissors'}
+
+  
+
+
 
 
 if __name__ == "__main__":
