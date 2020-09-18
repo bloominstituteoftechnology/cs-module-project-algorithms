@@ -3,10 +3,12 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def moving_zeroes(arr):
-    # Your code here
-
-    pass
-
+    originalArrCount = len(arr)
+    arr[:] = filter(None, arr) #remove zeroes
+    newArrCount = len(arr)
+    arr.extend([0] * (originalArrCount - newArrCount)) #add zeroes based on the count descrepency
+    
+    return arr
 
 if __name__ == '__main__':
     # Use the main function here to test out your implementation
