@@ -3,9 +3,27 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
-    # Your code here
+    n = len(arr)
+    if n < 1:
+        return -1
+    
+    left_product = [0] * n
+    right_product = [0] * n
+    product = [0] * n
 
-    pass
+    left_product[0] = 1
+    right_product[n - 1] = 1
+
+    for i in range(1, n):
+        left_product[i] = arr[i - 1] * left_product[i - 1]
+    
+    for i in range(n - 2, -1, -1):
+        right_product[i] = arr[i + 1] * right_product[i + 1]
+    
+    for i in range(n):
+        product[i] = left_product[i] * right_product[i]
+
+    return product
 
 
 if __name__ == '__main__':
