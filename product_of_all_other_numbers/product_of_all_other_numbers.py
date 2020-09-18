@@ -1,11 +1,27 @@
-'''
+"""
 Input: a List of integers
 Returns: a List of integers
-'''
-def product_of_all_other_numbers(arr):
-    # Your code here
+"""
 
-    pass
+
+def product_of_all_other_numbers(arr):
+    if len(arr) == 2:
+        return [arr[1], arr[0]]
+    if len(arr) <= 1:
+        return arr
+
+    products = [0 for x in arr]
+    p = 1
+    for i in range(len(arr)):
+        products[i] = p
+        p *= arr[i]
+
+    p = 1
+    for i in range(len(arr) - 1, -1, -1):
+        products[i] *= p
+        p *= arr[i]
+
+    return products
 
 
 if __name__ == '__main__':
