@@ -4,8 +4,17 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
-
-    pass
+    while len(arr) > 0:
+        #select number and remove it from list
+        number = arr.pop(0)
+        
+        #if number is not in the list, return single number 
+        if number not in arr:
+            return number
+        
+        #else remove it by the value
+        else: 
+            arr.remove(number)
 
 
 if __name__ == '__main__':
