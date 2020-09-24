@@ -19,6 +19,7 @@ def single_number(arr):
                     break
                 else: 
                     if other + 1 == len(arr):
+                        print(arr[num])
                         return arr[num]
                         
                     else: 
