@@ -4,9 +4,16 @@ Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
     # Your code here
+    result = []
 
-    pass
+    for indexA, i in enumerate(arr):
+        prod = 1
+        for indexB, j in enumerate(arr):
+            if indexA != indexB:
+                prod *= j
+        result.append(prod)
 
+    return result
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
