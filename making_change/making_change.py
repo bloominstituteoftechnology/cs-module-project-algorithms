@@ -3,7 +3,13 @@
 import sys
 
 def making_change(amount, denominations):
-  # Your code here
+  if amount == 0:
+    return 1
+  elif amount < 0:
+    return 0
+  return making_change(amount, denominations - 1) + making_change(amount, denominations - 2) + making_change(amount, denominations - 3)
+  + making_change(amount, denominations - 4) + making_change(amount, denominations - 5) 
+
 
   pass
 
