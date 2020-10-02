@@ -33,8 +33,8 @@ There isn't an official prescribed order for tackling the problems, though a sub
  1. [X] `single_number`
  2. [X] `moving_zeroes`
  3. [X] `product_of_all_other_numbers`
- 4. [] `sliding_window_max`
- 5. [] `eating_cookies`
+ 4. [X] `sliding_window_max`
+ 5. [ ] `eating_cookies`
 
 For each problem, `cd` into the directory, read the instructions for the challenge, implement your solution in the skeleton file, then test it using the provided test file.
 
