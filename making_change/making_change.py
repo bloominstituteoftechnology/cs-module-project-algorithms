@@ -2,10 +2,20 @@
 
 import sys
 
-def making_change(amount, denominations):
-  # Your code here
 
-  pass
+def making_change(amount, denominations, memory=None):
+  if memory == None:
+      memory = [0] * (amount + 1)
+  if amount <= 4:
+      memory[amount] = 1
+  elif amount == 5:
+      memory[amount] = 2
+  elif memory[amount] == 0:
+      total = 0
+      for denomination in denominations:
+        total += making_change(amount - denomination, memory)
+      memory[amount] = total
+  return memory[amount]
 
 
 if __name__ == "__main__":
