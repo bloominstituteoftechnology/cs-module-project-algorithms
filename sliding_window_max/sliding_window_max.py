@@ -5,7 +5,16 @@ Returns: a List of integers
 def sliding_window_max(nums, k):
     # Your code here
 
-    pass
+    left_index = 0
+    right_index = 2
+    maxx = []
+
+    while nums[left_index] == 0 and nums[right_index] == 2:s
+        maxx.append(max(nums[left_index : right_index]))
+        left_index += 1
+        right_index += 1
+
+    
 
 
 if __name__ == '__main__':
