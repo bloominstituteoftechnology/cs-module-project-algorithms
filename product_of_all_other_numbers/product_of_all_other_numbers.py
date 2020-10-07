@@ -3,10 +3,27 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
-    # Your code here
+    # Old code
+    prods = []
+    for i, _ in enumerate(arr):
+        nums = arr.copy()
+        nums.pop(i)
+        prod = 1
+        for n in nums:
+            prod *= n
+        prods.append(prod)
 
-    pass
+    return prods
 
+    # This completes both tests with a runtime of 0.001s
+    # so I don't think I can improve it any more.
+    # Also, it was written without using division from the get-go
+    # so I didn't need to change anything there, either
+
+    # I think the runtime is O(n*(n-1)), unless arr.copy()
+    # is an O(n) operation, but since its runtime is already
+    # so low, I don't think it matters that the Big-Oh notation
+    # is exponential.
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
