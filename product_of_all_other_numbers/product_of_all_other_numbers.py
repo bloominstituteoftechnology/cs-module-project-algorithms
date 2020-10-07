@@ -2,10 +2,14 @@
 Input: a List of integers
 Returns: a List of integers
 '''
-def product_of_all_other_numbers(arr):
-    # Your code here
 
-    pass
+from functools import reduce
+def product_of_all_other_numbers(arr):
+    product = reduce((lambda x, y: x * y), arr)
+    result = map(lambda z: product / z, arr)
+    return list(result)
+
+
 
 
 if __name__ == '__main__':
