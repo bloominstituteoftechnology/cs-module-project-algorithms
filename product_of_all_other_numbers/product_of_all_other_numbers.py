@@ -4,8 +4,21 @@ Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
     # Your code here
+    result = []
 
-    pass
+    # loop over the length of the array
+    for i in range(len(arr)):
+
+        arr_copy = [*arr]
+        arr_copy.pop(i)
+
+        product = 1
+        for value in arr_copy:
+            product *= value
+
+        result.append(product)
+
+    return result
 
 
 if __name__ == '__main__':
