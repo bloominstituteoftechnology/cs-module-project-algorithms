@@ -4,8 +4,25 @@ Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
     # Your code here
+    # 1. loop through each number in the input list
+    # 2. find the product fo the other numbers in the list
+    # 3. append that product value to a new product list
+    # 4. Then replace each value in the input list with the product values
+    n =[0] *len(arr)
+    for i in range(len(arr)):
+        copy = arr.copy()
+        copy[i]=1
+        result=1
+        for val in copy:
+            result = result * val
+        n[i] = result
+    return n
 
-    pass
+    
+      
+   
+
+   
 
 
 if __name__ == '__main__':
