@@ -3,8 +3,22 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
-    # Your code here
-
+    products = [0 for _ in range(len(arr))]
+    # For each int, we find the product of all the ints
+    # before it, storing the total product so far each time
+    product_so_far = 1
+    for i in range(len(arr)):
+        products[i] = product_so_far
+        product_so_far *= arr[i]
+    # For each int, we find the product of all the ints
+    # after it. Each index in products already has the
+    # product of all the ints before it, now we're storing
+    # the total product of all other ints
+    product_so_far = 1
+    for i in range(len(arr) - 1, -1, -1):
+        products[i] *= product_so_far
+        product_so_far *= arr[i]
+    return products
     pass
 
 
