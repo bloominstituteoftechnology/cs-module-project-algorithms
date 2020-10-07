@@ -2,10 +2,25 @@
 Input: a List of integers as well as an integer `k` representing the size of the sliding window
 Returns: a List of integers
 '''
-def sliding_window_max(nums, k):
-    # Your code here
 
-    pass
+import collections
+import itertools
+
+def sliding_window_max(nums, size):
+    arr = []
+    
+    nums = iter(nums)
+    window = collections.deque(
+        itertools.islice(nums, size-1),
+        maxlen=size
+    )
+    for item in nums:
+        window.append(item)
+        numbers = tuple(window)
+        max_num = max(numbers)
+        arr.append(max_num)
+    
+    return arr
 
 
 if __name__ == '__main__':
