@@ -5,13 +5,12 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
-    temp = arr
     result = []
 
     for element in arr:
+        temp = arr[:]
         temp.remove(element)
         result.append(math.prod(temp))
-        temp = arr
     
     return result
 
