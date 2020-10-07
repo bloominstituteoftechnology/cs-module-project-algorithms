@@ -3,9 +3,18 @@
 import sys
 
 def rock_paper_scissors(n):
-  # Your code here
+    output = []
+    plays = ['rock', 'paper', 'scissors']
 
-  pass
+    def build_moves(moves_remaining, moves=[]):
+        if moves_remaining == 0:
+            output.append(moves)
+        else:
+            for play in plays:
+                build_moves(moves_remaining - 1, [*moves, play])
+        return output
+
+    return build_moves(n)
 
 
 if __name__ == "__main__":
