@@ -1,16 +1,29 @@
-'''
-Input: a List of integers
-Returns: a List of integers
-'''
-def product_of_all_other_numbers(arr):
-    # Your code here
+# '''
+# Input: a List of integers
+# Returns: a List of integers
+# '''
 
-    pass
+
+def product_of_all_other_numbers(array):
+    # create a holder array to hold the result
+    result = []
+
+    # outer loop
+    for firstIndex in range(len(array)):
+        product = 1
+        # inner loop
+        for secondIndex in range(len(array)):
+
+            if firstIndex != secondIndex:
+                # calculate the product of the rest elements in the array
+                product *= array[secondIndex]
+        result.append(product)
+
+    return result
 
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
-    # arr = [1, 2, 3, 4, 5]
-    arr = [2, 6, 9, 8, 2, 2, 9, 10, 7, 4, 7, 1, 9, 5, 9, 1, 8, 1, 8, 6, 2, 6, 4, 8, 9, 5, 4, 9, 10, 3, 9, 1, 9, 2, 6, 8, 5, 5, 4, 7, 7, 5, 8, 1, 6, 5, 1, 7, 7, 8]
+    arr = [1, 7, 3, 4]
 
     print(f"Output of product_of_all_other_numbers: {product_of_all_other_numbers(arr)}")
