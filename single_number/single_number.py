@@ -3,10 +3,12 @@ Input: a List of integers where every int except one shows up twice
 Returns: an integer
 '''
 def single_number(arr):
-    # Your code here
+    unique = arr[0]
 
-    pass
+    for i in range(1, len(arr)):
+        unique = unique ^ arr[i]
 
+    return unique
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
