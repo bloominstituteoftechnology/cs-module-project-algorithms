@@ -11,7 +11,9 @@ def single_number(arr):
       else:
         my_set.remove(num)
     
-    return my_set
+    list_from_set = list(my_set)
+
+    return list_from_set[0]
 
 
 if __name__ == '__main__':
