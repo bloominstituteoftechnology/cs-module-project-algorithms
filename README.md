@@ -65,3 +65,5 @@ You will follow the same process as above for each of these **stretch problems**
 Each problem folder contains a test file. Getting all of those tests to pass is how you know that you adequately completed the problem.
 
 Make sure you run and pass the tests for each problem before moving on to the next challenge.
+
+git check
