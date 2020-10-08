@@ -1,5 +1,5 @@
 # Module Project - Algorithms
-
+..............................
 ## Sprint: Algorithms
 
 ## Modules: A First-Pass Solution and Writing Better Solutions
