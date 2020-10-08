@@ -4,8 +4,15 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
-
-    pass
+    num_dict = {}
+    for num in arr:
+        if num in num_dict:
+            num_dict[num] += 1
+        else:
+            num_dict[num] = 1
+    for key, value in num_dict.items():
+        if value == 1:
+            return key
 
 
 if __name__ == '__main__':
