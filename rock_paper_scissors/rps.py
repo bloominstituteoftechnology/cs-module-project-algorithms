@@ -1,11 +1,12 @@
 #!/usr/bin/python
 
 import sys
+import random
 
 def rock_paper_scissors(n):
   # Your code here
-
-  pass
+  rps = ["Rock", "Paper", "Scissors"]
+  return rps[random.randint(0, 2)]
 
 
 if __name__ == "__main__":

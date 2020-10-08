@@ -4,8 +4,24 @@ Returns: a List of integers
 '''
 def sliding_window_max(nums, k):
     # Your code here
-
-    pass
+    solution = []
+    start = -1
+    end = k-1
+    for i in nums:
+        start += 1
+        end += 1
+        #print(start, end)
+        win = nums[start:end]
+        if len(win) is 3:
+            print(win)
+            result = 0
+            for x in win:
+                if x >= result and len(win) is 3:
+                    result = x  
+            solution.append(result)
+            print(result)
+            print(solution)
+    return solution
 
 
 if __name__ == '__main__':
