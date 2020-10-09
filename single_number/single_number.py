@@ -5,17 +5,6 @@ Returns: an integer
 def single_number(arr):
     # Your code here
     # First pass Solution
-    
-    # so we have arr would have some duplicate elements
-    # then we would only pick the element with no duplicates
-    # how would we do that? with very fool way
-    # hmm..
-    # let's do this
-    # create an empty list
-    # loop thru arr and append element to the new empty list
-    # if we already have the element, instead of appending it,
-    # pop the element from the new list
-    # this is O(n^2) time complexity
 
     storage = {}
     new_list = []
