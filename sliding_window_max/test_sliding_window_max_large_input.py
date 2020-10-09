@@ -1,24 +1,25 @@
 import time
 import unittest
 from sliding_window_max import sliding_window_max
+from sliding_window_2nd import sliding_window_2nd
 
 class Test(unittest.TestCase):
     def test_sliding_window_max_large_input(self):
         arr = []
         k = 1000
 
-        with open("data/input.txt") as file:
+        with open("/Users/clmaciel/lambda/Python/03.Algorithms/cs-module-project-algorithms/sliding_window_max/data/input.txt") as file:
             for line in file:
                 arr.append(int(line.strip()))
 
         expected = []
 
-        with open("data/output.txt") as file:
+        with open("/Users/clmaciel/lambda/Python/03.Algorithms/cs-module-project-algorithms/sliding_window_max/data/output.txt") as file:
             for line in file:
                 expected.append(int(line.strip()))
 
         start_time = time.time()
-        answer = sliding_window_max(arr, k)
+        answer = sliding_window_2nd(arr, k)
         end_time = time.time()
 
         self.assertTrue((end_time - start_time) < 1)
