@@ -4,11 +4,11 @@ from eating_cookies import eating_cookies
 class Test(unittest.TestCase):
 
   def test_eating_cookies_small_n(self):
-    self.assertEqual(eating_cookies(0), 1)
-    self.assertEqual(eating_cookies(1), 1)
-    self.assertEqual(eating_cookies(2), 2)
-    self.assertEqual(eating_cookies(5), 13)
-    self.assertEqual(eating_cookies(10), 274)
+    self.assertEqual(eating_cookies(0, [0 for i in range(1)]), 1)
+    self.assertEqual(eating_cookies(1, [0 for i in range(2)]), 1)
+    self.assertEqual(eating_cookies(2, [0 for i in range(3)]), 2)
+    self.assertEqual(eating_cookies(5, [0 for i in range(6)]), 13)
+    self.assertEqual(eating_cookies(10, [0 for i in range(11)]), 274)
 
   def test_eating_cookies_large_n(self):
     self.assertEqual(eating_cookies(50, [0 for i in range(51)]), 10562230626642)
