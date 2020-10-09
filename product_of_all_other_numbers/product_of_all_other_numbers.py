@@ -8,9 +8,9 @@ def product_of_all_other_numbers(arr):
     # let's loop thru with O n^2
 
     new_list = []
-    for i, value in enumerate(arr, start=1):
+    for i, value in enumerate(arr):
         multiplier = 1
-        for j, value in enumerate(arr, start=1):
+        for j, value in enumerate(arr):
             if i != j:
                 multiplier *= value
         new_list.append(multiplier)        
