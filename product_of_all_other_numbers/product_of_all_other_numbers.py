@@ -1,12 +1,20 @@
+import math
 '''
 Input: a List of integers
 Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
     # Your code here
+    totals = []
+    temp = 1
 
-    pass
+    for i in range(0, len(arr)):
+        temp = arr[i]
+        arr[i] = 1
+        totals.append(math.prod(arr))
+        arr[i] = temp
 
+    return totals
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
