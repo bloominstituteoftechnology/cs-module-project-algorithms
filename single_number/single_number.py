@@ -4,8 +4,23 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
+    # First pass Solution
 
-    pass
+    storage = {}
+    new_list = []
+    print(f'arr is {arr}')
+    for element in arr:
+        if element not in storage:
+            storage[element] = 1
+        else:
+            storage[element] += 1
+    for key, value in storage.items():
+        if value == 1:
+            new_list.append(key)
+
+    if len(new_list) == 1:
+        return new_list[0]
+    return new_list
 
 
 if __name__ == '__main__':
