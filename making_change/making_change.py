@@ -4,8 +4,12 @@ import sys
 
 def making_change(amount, denominations):
   # Your code here
+    if amount <= 0:
+      return None
+    else:
+        if making_change(amount)
 
-  pass
+    pass
 
 
 if __name__ == "__main__":
