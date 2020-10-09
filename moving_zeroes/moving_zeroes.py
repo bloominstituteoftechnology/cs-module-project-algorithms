@@ -1,11 +1,19 @@
-'''
-Input: a List of integers
-Returns: a List of integers
-'''
 def moving_zeroes(arr):
-    # Your code here
+    """
+    Write a function that takes an array of integers and moves each non-zero integer
+     to the left side of the array, then returns the altered array.
+     The order of the non-zero integers does not matter in the mutated array.
+     Input: a List of integers
+    Returns: a List of integers
+    """
+    # so could append to the end if it equals zero
+    for i in arr:
+        if i == 0:
+            # remove so that we don't have leftover zeroes
+            arr.remove(i)
+            arr.append(i)
 
-    pass
+    return arr
 
 
 if __name__ == '__main__':
