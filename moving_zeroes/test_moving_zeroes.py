@@ -14,7 +14,6 @@ class Test(unittest.TestCase):
 
         for x in answer[3:]:
             self.assertEqual(x, 0)
-
     def test_moving_zeroes_return_value_2(self):
         arr = [1, 2, 3, 0, 4, 0, 0]
         answer = moving_zeroes(arr)
@@ -25,7 +24,6 @@ class Test(unittest.TestCase):
 
         for x in answer[4:]:
             self.assertEqual(x, 0)
-
     def test_moving_zeroes_return_value_3(self):
         arr = [4, 1, 2, 5]
         answer = moving_zeroes(arr)
@@ -57,7 +55,5 @@ class Test(unittest.TestCase):
 
         for x in answer[3:]:
             self.assertEqual(x, 0)
-
-
 if __name__ == '__main__':
     unittest.main()
