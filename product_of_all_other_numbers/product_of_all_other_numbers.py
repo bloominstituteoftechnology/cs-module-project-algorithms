@@ -1,11 +1,19 @@
 '''
 Input: a List of integers
 Returns: a List of integers
+https://stackoverflow.com/questions/36288124/multiply-list-by-all-elements-of-the-list-except-at-its-own-index
+reduce https://www.geeksforgeeks.org/reduce-in-python/
+enumerate https://www.bitdegree.org/learn/python-enumerate
 '''
+
+from functools import reduce
+
 def product_of_all_other_numbers(arr):
     # Your code here
-
-    pass
+    res = []
+    for i, el in enumerate(arr):
+        res.append(reduce(lambda x, y: x*y, arr[:i] + arr[i+1:]))
+    return res
 
 
 if __name__ == '__main__':
