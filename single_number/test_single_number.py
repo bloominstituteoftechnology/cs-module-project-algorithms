@@ -11,8 +11,10 @@ class Test(unittest.TestCase):
             arr.append(i)
 
         random.shuffle(arr)
+        print(arr)
         rand_index = random.randint(0, len(arr))
         num = arr.pop(rand_index)
+        print(num)
 
         self.assertEqual(single_number(arr), num)
 
