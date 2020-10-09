@@ -3,9 +3,10 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def moving_zeroes(arr):
-    # Your code here
+    # sort the array, putting 0s at the end
+    arr.sort(key=lambda value: value == 0)
 
-    pass
+    return arr
 
 
 if __name__ == '__main__':
