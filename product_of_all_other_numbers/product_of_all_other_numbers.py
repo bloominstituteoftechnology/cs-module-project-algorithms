@@ -4,17 +4,13 @@ Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
     result = []
-    temp = 1
+    total = 1
     n = len(arr)
     
     for i in range(0, n):
-        for j in range(0, n):
-            if i == j:
-                continue
-            
-            temp = temp * arr[j]
-        result.append(temp)
-        temp = 1
+        total *= arr[i]
+    for i in range(0, n):
+        result.append(total / arr[i])
         
     return result
 
