@@ -4,15 +4,9 @@ Returns: a List of integers
 '''
 def moving_zeroes(arr):
     # Your code here
-    insert_index = 0
-
-    for i in range(len(arr)):
-        if arr[i] != 0:
-            arr[insert_index] = arr[i]
-            insert_index += 1
-
-    for i in range(insert_index, len(arr)):
-        arr[i] = 0
+    for i in arr:
+        if i == 0:
+            arr.append(arr.pop(arr.index(i)))
     return arr
 
 
