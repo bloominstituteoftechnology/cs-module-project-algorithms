@@ -2,10 +2,40 @@
 Input: a List of integers where every int except one shows up twice
 Returns: an integer
 '''
+
 def single_number(arr):
     # Your code here
+    unique_num = set()
+    
 
-    pass
+    for num in arr:
+        if num in unique_num:
+            unique_num.remove(num)
+        else:
+            unique_num.add(num)
+
+    
+    (unique, ) = unique_num
+
+    return unique
+
+
+    
+
+   
+
+
+
+
+
+        
+
+   
+    
+
+    
+        
+
 
 
 if __name__ == '__main__':
