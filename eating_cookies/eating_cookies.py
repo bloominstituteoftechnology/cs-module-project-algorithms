@@ -23,6 +23,7 @@ def eating_cookies(n, cache):
     
     return result_at_n
 
+# Attempted a second pass solution, but was unsuccessful
 if __name__ == "__main__":
     # Use the main function here to test out your implementation
     num_cookies = 5
