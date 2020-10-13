@@ -4,8 +4,14 @@ import sys
 
 def making_change(amount, denominations):
   # Your code here
-
-  pass
+  table = [0 for _ in range(amount + 1)]
+  table[0] = 1
+  
+  for i in range(0, len(denominations)):
+    for j in range(denominations[i], amount + 1):
+      table[j] += table[j - denominations[i]]
+      
+  return table[amount]
 
 
 if __name__ == "__main__":
