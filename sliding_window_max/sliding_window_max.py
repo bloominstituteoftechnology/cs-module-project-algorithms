@@ -7,9 +7,9 @@ start = time.time()
 def sliding_window_max(nums, k):
     start = 0
     end = k
-    result = []
+    result = [0] * (len(nums) - k + 1)
     while end <= len(nums):
-        result.append(max(nums[start:end]))
+        result[start] = max(nums[start:end])
         start += 1
         end += 1
 
