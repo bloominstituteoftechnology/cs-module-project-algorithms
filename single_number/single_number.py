@@ -5,7 +5,9 @@ Returns: an integer
 def single_number(arr):
     # Your code here
 
-    pass
+    for number in arr:
+        if arr.count(number) == 1:
+            return number
 
 
 if __name__ == '__main__':
