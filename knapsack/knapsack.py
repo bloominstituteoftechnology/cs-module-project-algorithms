@@ -7,7 +7,14 @@ Item = namedtuple('Item', ['index', 'size', 'value'])
 
 def knapsack_solver(items, capacity):
     # Your code here
-
+    valueWeight = {}
+    combinedWeight = {}
+    for i, item in enumerate(items):
+      valueWeight[item.index] = item.value/item.size
+      combinedWeight[f'{item.index}+{item.index+1}'] = item.size + item.size
+    #print(valueWeight) 
+    #print(combinedWeight)
+    print(combinedWeight)
     pass
 
 
