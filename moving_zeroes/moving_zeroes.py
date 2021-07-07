@@ -1,14 +1,19 @@
-'''
+"""
 Input: a List of integers
 Returns: a List of integers
-'''
+"""
+
+
 def moving_zeroes(arr):
     # Your code here
+    count = arr.count(0)
+    for i in range(0, count):
+        arr.remove(0)
+        arr.append(0)
+    return arr  # Ran 5 tests in 0.000s
 
-    pass
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     # Use the main function here to test out your implementation
     arr = [0, 3, 1, 0, -2]
 
