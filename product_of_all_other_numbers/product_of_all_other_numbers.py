@@ -5,7 +5,22 @@ Returns: a List of integers
 def product_of_all_other_numbers(arr):
     # Your code here
 
-    pass
+    #First pass:
+    # Multiply all elements by each other
+    # Take that product, and divide it by the current element
+    # store at the current location
+    # This will be an 0(2n) so round to O(n)
+
+    product = 1 #starting with one because this is product and I want to
+                # use the *= operator
+
+    for ele in arr:
+        product *= ele
+
+    for i in range(len(arr)):
+        arr[i] = product / arr[i]
+
+    return arr
 
 
 if __name__ == '__main__':
