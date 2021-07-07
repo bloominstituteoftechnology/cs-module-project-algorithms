@@ -2,10 +2,53 @@
 Input: a List of integers as well as an integer `k` representing the size of the sliding window
 Returns: a List of integers
 '''
-def sliding_window_max(nums, k):
-    # Your code here
 
-    pass
+'''
+Returns an array consisting of the max value of each window
+(length of k) of elements
+
+Params:
+    nums (list): list of ints
+    k (int): int representing sliding window size
+
+Returns:
+    list of ints consisting of max value of each window
+'''
+# ***First Pass***
+'''
+- k is window
+- make a new array to hold temp numbers in window
+- make another array to hold expected output
+- loop (first pass is 1 so ind0, ind1, ind2 & second pass is 2 so ind1, ind2, ind3)
+    - loop over numbers in window
+    - append numbers to window_array
+- append window set numbers to new array
+- compare numbers in new array 
+- return max value and append it to expected output array
+'''
+#***First Pass***
+# def sliding_window_max(nums, k):
+#     window_array = []
+#     expected_output = []
+#     while 0 < len(nums) - (k-1):
+#         for number in nums[0:k]:
+#             window_array.append(number)
+#         window_array.sort()
+#         max_number = window_array[k-1]
+#         expected_output.append(max_number)
+#         nums.pop(0)
+#         window_array = []
+#     return expected_output
+
+#***Optimized Solution***
+def sliding_window_max(nums, k):
+
+    expected_output = []
+    while 0 < len(nums) - (k - 1):
+        window_array = nums[0:k]
+        expected_output.append(max(window_array))
+        nums.pop(0)
+    return expected_output
 
 
 if __name__ == '__main__':
