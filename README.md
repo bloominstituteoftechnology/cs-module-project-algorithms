@@ -50,7 +50,7 @@ For the Module 4 project, your main objective is to work on improving at least t
 
 When you confront a problem you haven't encountered before, the general strategy (adapted from [George Pólya's Problem Solving Principles](https://en.wikipedia.org/wiki/How_to_Solve_It)) is as follows:
 
-[UPER](https://github.com/LambdaSchool/CS-Wiki/wiki/Lambda-Problem-Solving-Framework)
+[UPER](https://github.com/BloomInstituteOfTechnology/CS-Wiki/wiki/Lambda-Problem-Solving-Framework)
 
 ## Stretch goals
 
